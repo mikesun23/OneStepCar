@@ -1,0 +1,24 @@
+
+<div class="row">
+
+  <div class="col-3">
+    <ul class="list-group">
+      <li class="list-group-item">
+        <a class="nav-link" [routerLink]="[{ outlets: { admin: ['dashboard'] }}]">Dashboard</a>
+      </li>
+      <li class="list-group-item">
+        <a class="nav-link" [routerLink]="[{ outlets: { admin: ['waitingPostList']} }]">Waiting Pool</a>
+      </li>
+      <li class="list-group-item">
+        <a class="nav-link" [routerLink]="[{ outlets: { admin: ['approvedPostList']} }]">Approved Pool</a>
+      </li>
+      <li class="list-group-item">
+        <a class="nav-link" [routerLink]="[{ outlets: { admin: ['userList']} }]">User List</a>
+      </li>
+    </ul>
+  </div>
+
+  <div class="col">
+    <router-outlet name="admin"></router-outlet>
+  </div>
+</div>

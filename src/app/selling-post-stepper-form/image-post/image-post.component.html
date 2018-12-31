@@ -1,0 +1,98 @@
+<div class="card-header">
+  <div id="inputGroup" class="custom-file">
+    <div class="row">
+      <div class="col-3">
+        <label for="imageinput" class="btn btn-primary">Add Photo/s</label>
+        <input #imageInput [disabled]="spaceLimitHitFlag || countLimitHitFlag" id="imageinput" type="file" class="btn btn-primary"
+          (change)="detectFiles($event)" style="visibility:hidden;" accept="image/*" multiple />
+      </div>
+
+      <div class="col-6">
+        <div class="progress">
+          <div id="percentageBar" class="progress-bar" role="progressbar" [style.width]="spacePercentageStr"
+            attr.aria-valuenow="{{spacePercentage}}" aria-valuemin="0" aria-valuemax="100">{{(totalSpace/1000/spaceLimit
+            * 100) | number:'1.0-0'}}%</div>
+        </div>
+      </div>
+
+      <div class="col-3">
+        <button class="btn btn-danger removeAll-button" (click)="removeAll()">Remove All</button>
+      </div>
+    </div>
+
+    <div class="row" *ngIf="spaceLimitHitFlag">
+      <div class="col">
+        <div class="alert alert-warning" role="alert">
+          Space limit has reached, Can't add last photo, Change or Go Next!
+        </div>
+      </div>
+    </div>
+    <div class="row" *ngIf="countLimitHitFlag">
+      <div class="col">
+        <div class="alert alert-warning" role="alert">
+          Count limit has reached, Can't add last photo, Change or Go Next!
+        </div>
+      </div>
+    </div>
+    <div class="row" *ngIf="invalidInputHitFlag">
+      <div class="col">
+        <div class="alert alert-warning" role="alert">
+          Uploads contain/are invalid. Try again!
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="card-body">
+  <ul id="previewList" class="list-group" *ngFor="let image of imageList; let i = index">
+    <div class="card">
+      <div class="card-body">
+        <div class="row">
+          <div class="col-8">
+            <p class="card-text"><small class="text-muted">
+                <b>Name:</b>&nbsp; {{image['name']}} &nbsp;
+                <b>Size:</b>&nbsp; {{ (image['originalSize']/1000) | number:'1.0-0'}} KB
+              </small></p>
+          </div>
+          <div class="col-4">
+            <p class="card-tex"><small class="text-muted">
+                <b>Image:</b> &nbsp; {{i+1}} of {{imageList.length}}
+              </small></p>
+          </div>
+        </div>
+      </div>
+      <li class="list-group-item">
+        <img id="uploadedImage{{i}}" class="image-row" [src]="image['image']" class="rounded mb-3" width="180">
+
+        <div class="btn-group position-button" role="group">
+          <!-- Question: enlarge/modal works, the click sets the image at the first, then toggels the data, how is sure of the order? -->
+          <button type="button" class="btn btn-primary" (click)="enlargeImage(image['image'])" data-toggle="modal"
+            data-target="#previewModal">Preview</button>
+          <button type="button" class="btn btn-secondary" (click)="moveup(i)">Up</button>
+          <button type="button" class="btn btn-secondary" (click)="movedown(i)">Down</button>
+          <button type="button" class="btn btn-danger" (click)="removeOne(i)">Remove</button>
+        </div>
+      </li>
+    </div>
+  </ul>
+</div>
+
+<div>
+  <button mat-stroked-button color="primary" matStepperPrevious>Back</button>
+  <button mat-stroked-button color="primary" (click)="onSubmit(true)" matStepperNext>Next</button>
+</div>
+
+
+
+<!-- <button class="btn btn-primary bottom-submit" (click)="onSubmit()" [disabled]="imageList.length === 0">Submit</button> -->
+<div id="previewModal" class="modal fade" tabindex="-1" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-body">
+        <img [src]="enlargedImage" class="img-responsive">
+      </div>
+    </div>
+  </div>
+</div>

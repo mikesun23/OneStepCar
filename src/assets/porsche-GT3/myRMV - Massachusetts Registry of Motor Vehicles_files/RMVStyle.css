@@ -1,0 +1,419 @@
+﻿
+.auth-ssn-container {
+    width: 500px;
+}
+
+.padding-left-and-right-five-px {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+
+#txtSSN3 {
+    text-align: center;
+    width: 100px;
+    min-width: 70px;
+    display: inline;
+}
+
+#txtSSN2 {
+    text-align: center;
+    width: 50px;
+    min-width: 35px;
+    display: inline;
+}
+
+#txtSSN4 {
+    text-align: center;
+    width: 100px;
+    min-width: 70px;
+    display: inline;
+}
+
+.rmv-page-header {
+    background-color: #43956f;
+    margin-top: 10px;
+    /*margin-bottom:25px;*/
+    padding-left: 60px;
+    padding-right: 60px;
+    padding-top: 10px;
+    padding-bottom: 24px;
+    /*border-top-left-radius: 6px;*/
+    /*border-top-right-radius: 6px;*/
+    border-radius: 6px;
+    /*box-shadow: 0 8px 10px 1px rgba(0, 0, 0, .14), 0 3px 14px 2px rgba(0, 0, 0, .12), 0 5px 5px -3px rgba(0, 0, 0, .2)*/
+}
+
+.rmv-page-header-text {
+    font-size: 30px;
+    color: white;
+    text-align: center;
+}
+
+
+.word-break-all {
+    word-break: break-all;
+    display: block;
+}
+
+/* Originals above */
+
+/*.rmv-page-header-Mike {
+    margin-top: 10px;
+    padding-left: 60px;
+    padding-right: 60px;
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+
+.rmv-page-header-text-Mike {
+    font-size: 32px;
+    text-align: center;
+}
+
+.rmv-box-header {
+    background-color: #0A4484;
+    margin-top: 10px;
+    padding-left: 60px;
+    padding-right: 60px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+}
+
+.rmv-box-header-text {
+    font-size: 20px;
+    color: white;
+    text-align: center;
+}*/
+
+.content-container {
+    /*border-left: 1px solid #0A4484;
+    border-right: 1px solid #0A4484;
+    border-bottom: 1px solid #0A4484;*/
+    padding-top: 25px;
+    /*background-color: #FBFBFB;*/
+}
+
+.form-container {
+    margin: auto;
+    width: 1024px;
+    /*border-left: 1px solid #dadada;*/
+    /*border-right: 1px solid #dadada;*/
+    /*height:1000px;*/
+}
+
+.pull-right-767 {
+    float: right;
+}
+
+.center-767 {
+    text-align: center;
+}
+
+.standard-button-150 {
+    width: 150px;
+}
+
+
+.standard-button-200 {
+    width: 200px;
+}
+
+.standard-button-310 {
+    width: 310px;
+}
+.pad-top-bottom-10-768 {
+}
+
+@media (max-width:767px) {
+    #txtSSN3 {
+        text-align: center;
+        width: 60px;
+        display: inline;
+    }
+
+    #txtSSN2 {
+        text-align: center;
+        width: 50px;
+        display: inline;
+    }
+
+    #txtSSN4 {
+        text-align: center;
+        width: 70px;
+        display: inline;
+    }
+
+    .rmv-page-header-text {
+        font-size: 20px;
+        color: white;
+        text-align: center;
+    }
+
+    .pull-right-767 {
+        float: left;
+    }
+
+    .center-767 {
+        text-align: left;
+    }
+
+    .standard-button-150 {
+        margin-bottom: 10px !important;
+        width: 100%;
+    }
+
+    .standard-button-200 {
+        margin-bottom: 10px !important;
+        width: 100%;
+    }
+}
+
+@media (max-width:991px) {
+
+    .pad-top-bottom-10-991 {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+}
+
+
+@media (max-width:1023px) {
+
+    .form-container {
+        width: 100%;
+    }
+}
+
+.box-shadow--2dp {
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);
+}
+
+.box-shadow--3dp {
+    box-shadow: 0 3px 4px 0 rgba(0, 0, 0, .14), 0 3px 3px -2px rgba(0, 0, 0, .2), 0 1px 8px 0 rgba(0, 0, 0, .12);
+}
+
+.box-shadow--4dp {
+    box-shadow: 0 4px 5px 0 rgba(0, 0, 0, .14), 0 1px 10px 0 rgba(0, 0, 0, .12), 0 2px 4px -1px rgba(0, 0, 0, .2);
+}
+
+.box-shadow--6dp {
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, .14), 0 1px 18px 0 rgba(0, 0, 0, .12), 0 3px 5px -1px rgba(0, 0, 0, .2);
+}
+
+.box-shadow--8dp {
+    box-shadow: 0 8px 10px 1px rgba(0, 0, 0, .14), 0 3px 14px 2px rgba(0, 0, 0, .12), 0 5px 5px -3px rgba(0, 0, 0, .2);
+}
+
+.box-shadow--16dp {
+    box-shadow: 0 16px 24px 2px rgba(0, 0, 0, .14), 0 6px 30px 5px rgba(0, 0, 0, .12), 0 8px 10px -5px rgba(0, 0, 0, .2);
+}
+
+.center {
+    text-align: center;
+}
+
+/*Confirmation Message */
+.confirmclose {
+    color: white !important;
+    text-decoration: none;
+    display: block !important;
+    text-align: center;
+    font: bold 18px Verdana;
+}
+
+    .confirmclose:hover {
+        color: green !important;
+        text-decoration: none;
+    }
+
+/* Z-index of #mask must lower than #boxes .window */
+#mask {
+    position: absolute;
+    z-index: 9000;
+    background-color: #000;
+    display: none;
+}
+
+#boxes .window {
+    position: fixed;
+    width: 300px;
+    height: 200px;
+    display: none;
+    z-index: 9999;
+    padding: 20px;
+}
+
+/* Customize your modal window here, you can add background image too */
+#boxes #dialog {
+    width: 300px;
+    height: 200px;
+    padding: 20px;
+    background-color: #0A4484;
+    color: #ffffff;
+    font: bold 14px Verdana;
+}
+
+.hr-darker {
+    border-top: 1px solid #d9d9d9;
+}
+
+.payment-amount {
+    font-weight: bold;
+    color: green;
+}
+
+.tab-item-count {
+    background-color: #0A4484;
+    border-radius: 6px;
+    color: #ffffff;
+    padding-left: 3px;
+    padding-right: 3px;
+}
+
+.dashboard-section-title {
+    display: inline-block;
+    color: darkblue;
+    font-size:18px;
+    font-weight:500;
+    margin-top:10px;
+    margin-bottom:10px;
+    line-height:1.1;
+}
+
+.dashboard-section-sub-title {
+    display: inline-block;
+    color: darkblue;
+    font-size:14px;
+    font-weight:500;
+    margin-top:10px;
+    margin-bottom:10px;
+}
+
+@media print {
+    a:link:after,
+    a:visited:after {
+        content: "" !important;
+    }
+}
+
+/* Tab Styles*/
+.MyTabStyle .ajax__tab_header {
+    font-size: 14px;
+    display: block;
+}
+
+.MyTabStyle .ajax__tab_header .ajax__tab_outer {
+    border-color: #222;
+    color: #222;
+    padding-left: 10px;
+    margin-right: 3px;
+    border: solid 1px #d7d7d7;
+    height: 35px;
+    padding-top: 2px;
+}
+
+.MyTabStyle .ajax__tab_header .ajax__tab_inner {
+    border-color: #666;
+    color: #666;
+    padding: 3px 10px 2px 0px;
+}
+
+.MyTabStyle .ajax__tab_hover .ajax__tab_outer {
+
+}
+
+.MyTabStyle .ajax__tab_hover .ajax__tab_inner {
+
+}
+
+.MyTabStyle .ajax__tab_active .ajax__tab_outer {
+    /*border-bottom-color: #ffffff;*/
+    /*background-color: #ffffff;*/
+    border-bottom-color: #f5f5f5;
+    background-color: #f5f5f5;
+}
+
+.MyTabStyle .ajax__tab_active .ajax__tab_inner {
+    /*color: #000;*/
+    background-color: #f5f5f5;
+    border-radius: 4px;
+}
+
+.MyTabStyle .ajax__tab_body {
+    font-size: 10pt;
+    /*background-color: #fff;*/
+    background-color: #f5f5f5;
+    border-top-width: 0;
+    border: solid 1px #d7d7d7;
+    /*border-top-color: #ffffff;*/
+    border-top-color: #f5f5f5;
+    padding: 10px;
+}
+
+/* Tab Paging */
+.pagination-ys {
+    /*display: inline-block;*/
+    padding-left: 0;
+    margin: 20px 0;
+    border-radius: 4px;
+    padding-left:0px !important;
+
+}
+ 
+.pagination-ys table > tbody > tr > td {
+    display: inline;
+    padding-left:0px !important;
+
+}
+ 
+.pagination-ys table > tbody > tr > td > a,
+.pagination-ys table > tbody > tr > td > span {
+    position: relative;
+    float: left;
+    padding: 8px 12px;
+    line-height: 1.42857143;
+    text-decoration: none;
+    color: #dd4814;
+    background-color: #ffffff;
+    border: 1px solid #dddddd;
+    margin-left: -1px;
+}
+ 
+.pagination-ys table > tbody > tr > td > span {
+    position: relative;
+    float: left;
+    padding: 8px 12px;
+    line-height: 1.42857143;
+    text-decoration: none;    
+    margin-left: -1px;
+    z-index: 2;
+    color: #aea79f;
+    background-color: #f5f5f5;
+    border-color: #dddddd;
+    cursor: default;
+}
+ 
+.pagination-ys table > tbody > tr > td:first-child > a,
+.pagination-ys table > tbody > tr > td:first-child > span {
+    margin-left: 0;
+    border-bottom-left-radius: 4px;
+    border-top-left-radius: 4px;
+}
+ 
+.pagination-ys table > tbody > tr > td:last-child > a,
+.pagination-ys table > tbody > tr > td:last-child > span {
+    border-bottom-right-radius: 4px;
+    border-top-right-radius: 4px;
+}
+ 
+.pagination-ys table > tbody > tr > td > a:hover,
+.pagination-ys table > tbody > tr > td > span:hover,
+.pagination-ys table > tbody > tr > td > a:focus,
+.pagination-ys table > tbody > tr > td > span:focus {
+    color: #97310e;
+    background-color: #eeeeee;
+    border-color: #dddddd;
+}

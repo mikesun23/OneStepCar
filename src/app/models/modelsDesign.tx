@@ -1,0 +1,20 @@
+
+
+models:
+    general user
+        bidded list
+        watching list 
+        preference setting
+        intelligence data
+        wallet/biddin credits
+        important bidding target
+    car(product): can be used for listing, post form
+
+    order
+
+    shopping-cart-item
+
+    shopping-cart 
+        
+
+    

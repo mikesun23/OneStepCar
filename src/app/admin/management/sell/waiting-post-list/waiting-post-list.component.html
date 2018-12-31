@@ -1,0 +1,65 @@
+<p>
+  waiting-post-list works!
+</p>
+
+
+<div *ngFor="let carPost of waitingList">
+
+  <div class="card">
+    <div class="row">
+      <div class="col-6">
+        <!-- car post title image -->
+        <img [src]="carPost['imageUrlList']['0']" class="card-img" alt="">
+      </div>
+
+      <div class="col-6 card-body">
+        <!-- context summary -->
+        <h5 class="card-title">
+          {{carPost['currentPrice'] | currency:'USD':'symbol':'1.0-0'}}
+          <span class="posting-mileage">
+            {{carPost['carData']['detailInfo']['carMileageControl']}}miles
+          </span>
+        </h5>
+
+        <h6>
+          <span>{{
+            carPost['carData']['makeYear']['carYearControl'] + ' ' +
+            carPost['carData']['makeYear']['carMakeControl'] + ' ' +
+            carPost['carData']['basicInfo']['carModelControl'] + ' ' +
+            carPost['carData']['basicInfo']['carTrimControl']
+            }}</span>
+        </h6>
+
+        <li>
+          <span class="posting-detail-item">History report: </span> {{carPost['reportFileUrl'] ? 'Yes' :
+          'No'}}
+        </li>
+
+        <li>
+          <span class="posting-detail-item">Exterior: </span>{{carPost['carData']['detailInfo']['carExColorControl']}}
+        </li>
+
+        <li>
+          <span class="posting-detail-item">Interior: </span>{{carPost['carData']['detailInfo']['carInColorControl']}}
+        </li>
+
+        <li>
+          <span class="posting-detail-item">Transmission: </span>{{carPost['carData']['detailInfo']['carTransmissionControl']}}
+        </li>
+
+        <li>
+          <span class="posting-detail-item">Drivetrain: </span>{{carPost['carData']['detailInfo']['carDrivetrainControl']}}
+        </li>
+
+        <li>
+          <span class="posting-detail-item">Location: </span>{{carPost['geoAddress']['city'] + ' ' +
+          carPost['geoAddress']['state'] + ' ' + carPost['geoAddress']['zipcode']}}
+        </li>
+
+        <!-- bidding section information/data feed in -->
+        <button class="btn btn-primary" (click)="navToDetailPage(carPost)">Check All Details</button>
+      </div>
+    </div>
+  </div>
+
+</div>

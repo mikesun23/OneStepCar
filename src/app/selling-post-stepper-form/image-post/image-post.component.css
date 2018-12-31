@@ -1,0 +1,45 @@
+
+.position-button {
+  position: absolute;
+  right: 10px;
+  left: auto;
+}
+
+.header-button {
+  position: relative;
+  top: 20px;
+}
+
+.image-list-body {
+  position: relative;
+  top: 30px;
+}
+
+.tail-button {
+  position: relative;
+  top: 100px;
+}
+
+.bottom-submit {
+  margin-bottom: 50px;
+}
+
+.removeAll-button {
+  position: absolute;
+  right: 10px;
+}
+
+.modal-body {
+  padding: 0px;
+}
+
+.progress {
+  background-color: #ffc107;
+  border: 1px solid #007bff
+}
+
+.btn-primary-disabled {
+  color: #fff;
+  background-color: #007bff;
+  border-color: #007bff;
+}

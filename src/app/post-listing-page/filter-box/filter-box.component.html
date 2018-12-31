@@ -1,0 +1,132 @@
+<p>
+  filter-box works!
+</p>
+
+
+<!-- 
+  select Make
+
+  select year range
+
+  select model
+
+  select trim
+
+  select price range 
+
+  select mileage range
+
+  vehicle report
+
+  transmission
+
+  drivetrain
+
+  cylinder number
+
+  body style 
+
+  ex color 
+
+  in color
+  
+-->
+
+<div class="card">
+  <div class="card-header">
+    <button (click)="applyFilter()" class="btn btn-primary">Apply Filter</button>
+  </div>
+  <div [formGroup]="filterForm">
+    <mat-accordion class="example-headers-align">
+
+      <mat-expansion-panel [expanded]="step === 0" (opened)="setStep(0)">
+        <mat-expansion-panel-header>
+          <mat-panel-title>Make</mat-panel-title>
+        </mat-expansion-panel-header>
+
+        <mat-form-field>
+          <mat-select placeholder="Make" (selectionChange)="makeSelected()" [formControlName]="'make'" required>
+            <mat-option *ngFor="let car of carMakes | keyvalue: controlGroupComparator" [value]="car.value['brand']">
+              <img class="example-option-img" aria-hidden [src]="car.value['logo']" height="25">
+              {{ car.value['brand'] }}
+            </mat-option>
+          </mat-select>
+          <mat-error *ngIf="filterForm.controls['make'].hasError('required')">Please choose a make!</mat-error>
+          <mat-hint>{{ selectedMake['feelingHint'] }}</mat-hint>
+        </mat-form-field>
+      </mat-expansion-panel>
+
+
+      <mat-expansion-panel [expanded]="step === 1" (opened)="setStep(1)">
+        <mat-expansion-panel-header>
+          <mat-panel-title>Year</mat-panel-title>
+          <mat-panel-description>Range Select</mat-panel-description>
+        </mat-expansion-panel-header>
+
+        <p>
+          <mat-select placeholder="1995" (selectionChange)="yearRangeStartSelected($event.value)">
+            <mat-option *ngFor="let year of selectedMake['yearArray']" [value]="year" [disabled]="selectedYearEnd!==undefined && selectedYearEnd<year">{{year}}</mat-option>
+          </mat-select>
+        </p>
+        <p>
+          <mat-select placeholder="2018" (selectionChange)="yearRangeEndSelected($event.value)">
+            <mat-option *ngFor="let year of selectedMake['yearArray']" [value]="year" [disabled]="selectedYearStart!==undefined && selectedYearStart>year">{{year}}</mat-option>
+          </mat-select>
+        </p>
+
+      </mat-expansion-panel>
+
+      <mat-expansion-panel [expanded]="step === 2" (opened)="setStep(2)">
+        <mat-expansion-panel-header>
+          <mat-panel-title>Year</mat-panel-title>
+          <mat-panel-description>Multi Select</mat-panel-description>
+        </mat-expansion-panel-header>
+
+        <div *ngIf="filterForm.controls['make'].value!==''" [formArrayName]="'yearArray'">
+          <div *ngFor="let year of selectedMake['yearArray']; let i = index">
+            <mat-checkbox placeholder="1995" (change)="yearMultiSelected($event.checked, year)" [checked]="selectedYears.includes(year)">{{year}}</mat-checkbox>
+          </div>
+        </div>
+      </mat-expansion-panel>
+
+
+
+      <mat-expansion-panel [expanded]="step === 3" (opened)="setStep(3)">
+        <mat-expansion-panel-header>
+          <mat-panel-title>Model</mat-panel-title>
+          <mat-panel-description>max pick 5</mat-panel-description>
+        </mat-expansion-panel-header>
+
+        <div *ngIf="filterForm.controls['make'].value!==''">
+          <div *ngFor="let model of modelList">
+            <mat-checkbox placeholder="model" (change)="modelMultiSelected($event.checked, model)" [disabled]="totalSelectedModelCounts<=0 && !selectedModels.includes(model)">{{model}}</mat-checkbox>
+
+          </div>
+        </div>
+
+      </mat-expansion-panel>
+
+      <mat-expansion-panel [expanded]="step === 4" (opened)="setStep(4)" [disabled]="selectedYears.length<=0 || selectedModels.length<=0">
+        <mat-expansion-panel-header>
+          <mat-panel-title>Trim</mat-panel-title>
+          <mat-panel-description>max pick 10</mat-panel-description>
+        </mat-expansion-panel-header>
+
+        <div *ngFor="let trim of trimList">
+          <mat-checkbox placeholder="trim" (change)="trimMultiSelected($event.checked, trim)">{{trim}}</mat-checkbox>
+
+        </div>
+
+      </mat-expansion-panel>
+
+
+      <!-- <mat-expansion-panel [expanded]="step === 5" (opened)="setStep(5)"></mat-expansion-panel> -->
+      <!-- <mat-expansion-panel [expanded]="step === 6" (opened)="setStep(6)"></mat-expansion-panel> -->
+      <!-- <mat-expansion-panel [expanded]="step === 7" (opened)="setStep(7)"></mat-expansion-panel> -->
+      <!-- <mat-expansion-panel [expanded]="step === 8" (opened)="setStep(8)"></mat-expansion-panel> -->
+      <!-- <mat-expansion-panel [expanded]="step === 9" (opened)="setStep(9)"></mat-expansion-panel> -->
+      <!-- <mat-expansion-panel [expanded]="step === 10" (opened)="setStep(10)"></mat-expansion-panel> -->
+
+    </mat-accordion>
+  </div>
+</div>

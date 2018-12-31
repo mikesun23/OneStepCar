@@ -1,0 +1,21 @@
+
+<!-- <button (click)="getAll()" class="btn btn-primary">Show hotest deals</button> -->
+
+<div class="row">
+  <div class="col-3">
+    <!-- cars-filter should come here -->
+  </div>
+
+  <div class="col">
+    <div class="row">
+      <ng-container *ngFor="let car of cars; let i = index">
+        <div class="col">
+          <!-- car-window comes here -->
+          <app-car-window [car]="car" [generalUserObservable]="userObservable" ></app-car-window>
+        </div>
+        <div *ngIf="(i + 1) % 2 === 0" class="w-100"></div>
+      </ng-container>
+    </div>
+  </div>
+
+</div>

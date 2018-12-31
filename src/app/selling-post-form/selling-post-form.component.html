@@ -1,0 +1,68 @@
+
+<div class="row">
+  <div class="col-md-2"></div>
+  <div class="col-md-5">
+    <form [formGroup]="carForm" (ngSubmit)="onSubmit()">
+
+      <div *ngFor="let section of carObject">
+        <div [formGroupName]="section.key" class="form-group">
+          <h3>{{ section.label }}</h3>
+
+          <div [ngSwitch]="section.controlType">
+            
+            <div *ngSwitchCase="'listOfEntry'">
+              <div *ngFor="let e of section.controlGroup | keyvalue:controlGroupComparator ">
+                <label [attr.for]="e.key">{{ e.key }}</label>
+                <input [formControlName]="e.key" [id]="e.key" [name]="e.key" type="text" class="form-control"
+                  required>
+                <div class="alert alert-danger" *ngIf="carForm.get(section.key).get(e.key).touched && carForm.get(section.key).get(e.key).invalid">{{ e.key }} is required!</div>
+
+              </div>
+            </div>
+
+            <div *ngSwitchCase="'listOfGroup'">
+              <div *ngFor="let e of section.controlGroup | keyvalue ">
+                <label [attr.for]="e.key">{{ e.key }}</label>
+                <input [formGroupName]="e.key" type="text" class="form-control">
+              </div>
+            </div>
+
+            <div *ngSwitchCase="'arrayOfObject'">
+              <button type="button" (click)="addPackage()">Add Package</button>
+              <div *ngFor="let e of packages.controls; let i=index">
+                <div [formGroupName]="i">
+                  <p>{{ i.toString() }}</p>
+                  <label>
+                    Name:
+                    <input [formControlName]="'name'" type="text" required class="form-control">
+                    <div class="alert alert-danger" *ngIf="carForm.get(section.key).get(i.toString()).get('name').touched && carForm.get(section.key).get(i.toString()).get('name').invalid">name is required!</div>
+                  </label>
+                  <label>
+                    Price:
+                    <input [formControlName]="'price'" type="text" requried class="form-control">
+                    <div class="alert alert-danger" *ngIf="carForm.get(section.key).get(i.toString()).get('price').touched && carForm.get(section.key).get(i.toString()).get('price').invalid">price is required!</div>
+                  </label>
+                  <div [formGroupName]="'features'">
+                    <button (click)="addFeature(i)" type="button" class="btn btn-primary">Add Feature</button>
+                    <div *ngFor="let f of e.get('features')['controls']; let x=index">
+                      <p>{{ f.value }}</p>
+                      <label>
+                        Features(optional):
+                      </label>
+                      <input type="text" [formControlName]="x" class="form-control">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="form-row">
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </div>
+    </form>
+  </div>
+
+  <div class="col-md-5"></div>
+</div>

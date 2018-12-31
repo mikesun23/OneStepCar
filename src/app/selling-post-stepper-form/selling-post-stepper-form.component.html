@@ -1,0 +1,279 @@
+<mat-horizontal-stepper [linear]="true" #stepper>
+
+  <mat-step [stepControl]="firstFormGroup">
+    <form [formGroup]="firstFormGroup">
+      <ng-template matStepLabel>Make and year</ng-template>
+      <p>
+        <mat-form-field>
+          <mat-select placeholder="Make" (selectionChange)="makeSelected()" [formControl]="carMakeControl"
+            required>
+            <mat-option *ngFor="let car of carMakes | keyvalue: controlGroupComparator" [value]="car.value['brand']">
+              <img class="example-option-img" aria-hidden [src]="car.value['logo']" height="25">
+              {{ car.value['brand'] }}
+            </mat-option>
+          </mat-select>
+          <mat-error *ngIf="carMakeControl.hasError('required')">Please choose a make!</mat-error>
+          <mat-hint>{{ selectedMake['feelingHint'] }}</mat-hint>
+        </mat-form-field>
+      </p>
+      <p>
+        <mat-form-field *ngIf="carMakeControl.value">
+          <mat-select placeholder="Year" [formControl]="carYearControl" required>
+            <mat-option *ngFor="let year of selectedMake['yearArray']" [value]="year">{{ year }}</mat-option>
+          </mat-select>
+          <mat-error *ngIf="carYearControl.hasError('required')">Please choose a make!</mat-error>
+        </mat-form-field>
+      </p>
+
+      <div>
+        <button (click)="submitStep1MakeAndYear()" [disabled]="!(carMakeControl.value!=='' && carYearControl.value!==null)"
+          mat-stroked-button color="primary" matStepperNext>Next</button>
+      </div>
+      <br>
+      <div>
+        <img class="logo-img" *ngIf="carMakeControl.value" aria-hidden [src]="selectedMake['topPhoto']">
+      </div>
+    </form>
+  </mat-step>
+
+  <mat-step [stepControl]="secondFormGroup">
+    <form [formGroup]="secondFormGroup">
+      <ng-template matStepLabel>Basic Info</ng-template>
+      <!-- model/series/class, edition/trim, body style, mileage, vin number -->
+      <p>
+        <mat-form-field>
+          <mat-select placeholder="Model" (selectionChange)="modelSelected($event.value)" [formControl]="carModelControl"
+            required>
+            <mat-option *ngFor="let model of mappedModelAndTrim" [value]="model.key">{{ model.key }}</mat-option>
+          </mat-select>
+          <mat-error *ngIf="carModelControl.hasError('required')">Please choose a model!</mat-error>
+        </mat-form-field>
+      </p>
+
+      <p>
+        <mat-form-field *ngIf="carModelControl.value!=='' && trimCombinations.length>0">
+          <mat-select placeholder="Trim" (selectionChange)="trimSelected($event.value)" [formControl]="carTrimControl"
+            required>
+            <mat-option *ngFor="let trim of trimCombinations " [value]="trim['key']">{{ trim['key'] }}</mat-option>
+          </mat-select>
+          <mat-error *ngIf="carTrimControl.hasError('required')">Please choose a trim!</mat-error>
+        </mat-form-field>
+      </p>
+
+      <p>
+        <mat-form-field *ngIf="carTrimControl.value!=='' && carTrimControl.value!==null">
+          <mat-select placeholder="Body Style" [formControl]="carBodyStyleControl" required>
+            <mat-option *ngFor="let style of bodyStyle" [value]="style">{{ style }}</mat-option>
+          </mat-select>
+          <mat-error *ngIf="carBodyStyleControl.hasError('required')"></mat-error>
+        </mat-form-field>
+      </p>
+
+      <div class="card" *ngIf="carTrimControl.value!==null && carBodyStyleControl.value!==null && mappedPackages.length > 0">
+        <div class="card-header">
+          <p>Equipped Packages: </p>
+        </div>
+        <ul class="list-group" [formGroupName]="'carPackagesControl'" *ngFor="let package of mappedPackages | objectLiteral">
+          <li class="list-group-item">
+            <mat-checkbox (change)="packagesSelected($event, package['name'])" [formControlName]="package.name" [value]="package">{{
+              package.name }}</mat-checkbox>
+            <button class="btn btn-primary feature-detail-button" type="button" data-toggle="collapse"
+              [attr.data-target]="'#' + (package.name | removeSpace)" aria-expanded="false" [attr.aria-controls]="package.name | removeSpace">Details</button>
+          </li>
+          <div class="collapse" id="{{package.name | removeSpace}}">
+            <ul class="list-group" *ngFor="let f of package.features">
+              <li class="list-group-item">{{f}}</li>
+            </ul>
+          </div>
+        </ul>
+      </div>
+
+      <div>
+        <button (click)="goBackToStep1()" mat-stroked-button color="primary" matStepperPrevious>Back</button>
+        <button (click)="submitStep2ModelTrimBodyStyle()" [disabled]="carModelControl.value==='' || carTrimControl.value===null ||carBodyStyleControl.value===null"
+          mat-stroked-button color="primary" matStepperNext>Next</button>
+      </div>
+    </form>
+  </mat-step>
+
+
+  <mat-step [stepControl]="thirdFormGroup">
+    <form [formGroup]="thirdFormGroup">
+      <ng-template matStepLabel>Detail Info</ng-template>
+
+      <!-- selling location -->
+      <div [formGroup]="sellingAddressControl">
+        <p>
+          <mat-form-field class="example-full-width">
+            <textarea matInput placeholder="Address" [formControlName]="'address'" required></textarea>
+            <mat-error *ngIf="sellingAddressControl.controls['address'].hasError('required')">Please enter address!</mat-error>
+          </mat-form-field>
+          &nbsp;
+          <button mat-button color="primary" data-toggle="collapse" data-target="#addressDetail">Detail</button>
+        </p>
+        <div class="collapse" id="addressDetail">
+          <div class="alert alert-success" role="alert">Accurate address helps buyers do radius search!</div>
+        </div>
+
+        <table class="example-full-width" cellspacing="0">
+          <tr>
+            <td>
+              <mat-form-field class="example-full-width">
+                <input matInput placeholder="City" [formControlName]="'city'" required>
+                <mat-error *ngIf="sellingAddressControl.controls['city'].hasError('required')">Please enter city!</mat-error>
+              </mat-form-field>
+            </td>
+            <td>
+              <mat-form-field class="example-full-width">
+                <mat-select placeholder="State" [formControlName]="'state'" required>
+                  <mat-option *ngFor="let s of allStates" [value]="s['key']">{{s['value']}}</mat-option>
+                </mat-select>
+                <mat-error *ngIf="sellingAddressControl.controls['state'].hasError('required')">Please select state!</mat-error>
+              </mat-form-field>
+            </td>
+            <td>
+              <mat-form-field class="example-full-width">
+                <input matInput #postalCode maxlength="5" placeholder="Postal Code" [formControlName]="'zipcode'"
+                  required>
+                <mat-hint align="end">{{postalCode.value.length}} / 5</mat-hint>
+                <mat-error *ngIf="sellingAddressControl.controls['zipcode'].hasError('required')">Please enter zip
+                  code!</mat-error>
+              </mat-form-field>
+            </td>
+          </tr>
+        </table>
+      </div>
+
+      <mat-divider></mat-divider>
+
+      <!-- color section -->
+
+      <p>
+        <mat-form-field hintLabel="Max 30 characters">
+          <!-- type="color" will emit a color panel and let user tweak the color plateter -->
+          <input matInput #excolor type="text" maxlength="30" placeholder="Exterior Color" [formControl]="carExColorControl"
+            required>
+          <mat-hint align="end">{{excolor.value?.length || 0}}/30</mat-hint>
+          <mat-error *ngIf="carExColorControl.hasError('required')">Please enter exterior color!</mat-error>
+
+        </mat-form-field>
+      </p>
+      <p>
+        <mat-form-field hintLabel="Max 30 characters">
+          <input matInput #incolor type="text" maxlength="30" placeholder="Interior Color" [formControl]="carInColorControl"
+            required>
+          <mat-hint align="end">{{incolor.value?.length || 0}}/30</mat-hint>
+          <mat-error *ngIf="carInColorControl.hasError('required')">Please enter interior color!</mat-error>
+
+        </mat-form-field>
+      </p>
+
+
+      <mat-divider></mat-divider>
+
+      <!-- mechanic section -->
+      <p>
+        <mat-form-field>
+          <mat-select placeholder="Transmission" [formControl]="carTransmissionControl" required>
+            <mat-option value="manual">Manual</mat-option>
+            <mat-option value="automatic">Automatic</mat-option>
+          </mat-select>
+          <mat-error *ngIf="carTransmissionControl.hasError('required')">Please choose a transmission!</mat-error>
+        </mat-form-field>
+      </p>
+      <p>
+        <mat-form-field>
+          <mat-select placeholder="Drivetrain" [formControl]="carDrivetrainControl" required>
+            <mat-option value="rear-wheel-drive">Rear Wheel Drive</mat-option>
+            <mat-option value="front-wheel-drive">Front Wheel Drive</mat-option>
+            <mat-option value="all-wheel-drive">All Wheel Drive</mat-option>
+          </mat-select>
+          <mat-error *ngIf="carDrivetrainControl.hasError('required')">Please choose a drivetrain!</mat-error>
+        </mat-form-field>
+      </p>
+      <p>
+        <mat-form-field>
+          <mat-select placeholder="Cylinder Number" [formControl]="carCylinderControl">
+            <mat-option value="3">3-cylinder</mat-option>
+            <mat-option value="4">4-cylinder</mat-option>
+            <mat-option value="6">6-cylinder</mat-option>
+            <mat-option value="8">8-cylinder</mat-option>
+            <mat-option value="10">10-cylinder</mat-option>
+            <mat-option value="12">12-cylinder</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </p>
+
+      <mat-divider></mat-divider>
+
+      <p>
+        <mat-form-field hintLabel="Max 200k miles">
+          <input matInput #mileage type="number" min="0" max="200000" placeholder="Mileage" [formControl]="carMileageControl"
+            required>
+          <mat-error *ngIf="carMileageControl.hasError('required')">Please enter mileage!</mat-error>
+          <mat-error *ngIf="carMileageControl.hasError('max')">Exceeding max 200k miles!</mat-error>
+          <mat-error *ngIf="carMileageControl.hasError('min')">Exceeding min 0 miles!</mat-error>
+        </mat-form-field>
+      </p>
+      <p>
+        <mat-form-field hintLabel="Exact 17 characters">
+          <input matInput #vin type="text" minlength="17" maxlength="17" placeholder="VIN code" [formControl]="carVinControl"
+            required>
+          <mat-hint align="end">{{vin.value?.length || 0}}/17</mat-hint>
+          <mat-error *ngIf="carVinControl.hasError('required') ">Please enter vin!</mat-error>
+          <mat-error *ngIf="carVinControl.hasError('maxlength') || carVinControl.hasError('minlength')">VIN has to be
+            17 digits!</mat-error>
+        </mat-form-field>
+      </p>
+      <p>
+        <mat-form-field>
+          <input matInput #price type="number" min="1000" class="example-right-align" placeholder="Price" [formControl]="carPriceControl"
+            min required>
+          <span matPrefix>$&nbsp;</span>
+          <mat-error *ngIf="carPriceControl.hasError('required')">Please enter selling price!</mat-error>
+          <mat-error *ngIf="carPriceControl.hasError('min')">Below min price($1000)!</mat-error>
+        </mat-form-field>
+      </p>
+
+      <div>
+        <button mat-stroked-button color="primary" matStepperPrevious>Back</button>
+        <button mat-stroked-button (click)="submitStep3DetailInformation()" color="primary" matStepperNext>Next</button>
+      </div>
+    </form>
+  </mat-step>
+
+  <mat-step>
+    <ng-template matStepLabel>Upload Photo</ng-template>
+    <app-image-post (submitedImageList)="submitStep4ImageList($event)"></app-image-post>
+  </mat-step>
+
+  <mat-step>
+    <ng-template matStepLabel>Seller's Note</ng-template>
+    <app-seller-note (submitHistoryReport)="submitHistoryReport($event)" (submitSellerNote)="submitSellerNote($event)"></app-seller-note>
+  </mat-step>
+
+  <mat-step>
+    <ng-template matStepLabel>Review</ng-template>
+    <div class="card-header">
+      <div class="btn-group position-button" role="group">
+        <button mat-stroked-button color="primary" matStepperPrevious>Back</button>
+        <button mat-raised-button color="primary" (click)="finalSubmit()">Submit</button>
+      </div>
+    </div>
+    <div *ngIf="allInputsReadyFlag">
+      <app-final-review-page *ngIf="allInputsReadyFlag &&  fifthInputGroup!==undefined" [firstFormGroup]="firstFormGroup.value"
+        [secondFormGroup]="secondFormGroup.value" [thirdFormGroup]="thirdFormGroup.value" [fourthInputGroup]="fourthInputGroup"
+        [fifthInputGroup]="fifthInputGroup" [historyReportFile]="historyReportFileBuffer"></app-final-review-page>
+    </div>
+    <div class="dard-header">
+      <div class="btn-group position-button" role="group">
+        <button mat-stroked-button color="primary" matStepperPrevious>Back</button>
+        <button mat-raised-button color="primary" (click)="finalSubmit()">Submit</button>
+      </div>
+
+    </div>
+
+
+  </mat-step>
+
+</mat-horizontal-stepper>

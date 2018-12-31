@@ -1,0 +1,75 @@
+<div class="card">
+  <!-- car post summary -->
+  <div class="row">
+    <div class="col-6">
+      <!-- car post title image -->
+      <img [src]="carPost['value']['imageUrlList']['0']" class="card-img" alt="">
+    </div>
+
+    <div class="col-6 card-body">
+      <!-- context summary -->
+      <h5 class="card-title">
+        {{carPost['value']['currentPrice'] | currency:'USD':'symbol':'1.0-0'}}
+        <span class="posting-mileage">
+          {{carPost['value']['carData']['detailInfo']['carMileageControl']}}miles
+        </span>
+      </h5>
+
+      <h6>
+        <span>{{
+          carPost['value']['carData']['makeYear']['carYearControl'] + ' ' +
+          carPost['value']['carData']['makeYear']['carMakeControl'] + ' ' +
+          carPost['value']['carData']['basicInfo']['carModelControl'] + ' ' +
+          carPost['value']['carData']['basicInfo']['carTrimControl']
+          }}</span>
+      </h6>
+
+      <li>
+        <span class="posting-detail-item">History report: </span> {{carPost['value']['reportFileUrl'] ? 'Yes' :
+        'No'}}
+      </li>
+
+      <li>
+        <span class="posting-detail-item">Exterior: </span>{{carPost['value']['carData']['detailInfo']['carExColorControl']}}
+      </li>
+
+      <li>
+        <span class="posting-detail-item">Interior: </span>{{carPost['value']['carData']['detailInfo']['carInColorControl']}}
+      </li>
+
+      <li>
+        <span class="posting-detail-item">Transmission: </span>{{carPost['value']['carData']['detailInfo']['carTransmissionControl']}}
+      </li>
+
+      <li>
+        <span class="posting-detail-item">Drivetrain: </span>{{carPost['value']['carData']['detailInfo']['carDrivetrainControl']}}
+      </li>
+
+      <li>
+        <span class="posting-detail-item">Location: </span>{{carPost['value']['geoAddress']['city'] + ' ' +
+        carPost['value']['geoAddress']['state'] + ' ' + carPost['value']['geoAddress']['zipcode']}}
+      </li>
+
+      <!-- bidding section information/data feed in -->
+      <button class="btn btn-primary" (click)="navToDetailPage(carPost)">Check All Details</button>
+    </div>
+  </div>
+
+  <hr />
+
+  <!-- bidding section -->
+  <div class="row">
+    <div class="col-6">
+      <div class="price-chart">
+        <app-first-round-bidding-widget *ngIf="currentUser && carPost" [currentUser]="currentUser" [carPost]='carPost'></app-first-round-bidding-widget>
+      </div>
+    </div>
+
+    <div class="col-6">
+      <div>
+        <p>price chart</p>
+      </div>
+    </div>
+
+  </div>
+</div>

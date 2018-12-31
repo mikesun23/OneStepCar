@@ -1,0 +1,14 @@
+<div class="row">
+  <div class="col-3">
+    <!-- search box -->
+    <app-filter-box (submitFilter)="applyFilter($event)" ></app-filter-box>
+  </div>
+
+  <div class="col">
+    <div *ngFor="let post of postList">
+      <app-post-card *ngIf="currentUser" [currentUser]="currentUser" [carPost]="post"></app-post-card>
+      <hr />
+    </div>
+  </div>
+
+</div>

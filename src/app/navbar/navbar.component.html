@@ -1,0 +1,46 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  
+  <!-- home page component -->
+  <a class="navbar-brand" href="#">OneStepCar</a>
+  
+  <!-- mobile version dropdown navbar -->
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <!-- navigation components  -->
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      
+      <!-- Home component(
+        Can be hot/popular deals
+        Can be a short servy ask preference) 
+      --> 
+      <app-home></app-home>
+
+      <!-- Buy Component(shop car) -->
+      <app-buycar></app-buycar>
+
+      <!-- Sell Component(sell car) needs login/auth to activate-->
+      <!-- for now just post all the dev/test data -->
+      <app-sell></app-sell>
+
+      <!-- Login/signUp component -->
+      <app-login-tab [generalUser]="generalUser"></app-login-tab>
+      <!-- <app-signup></app-signup> -->
+
+      <!-- after login/auth component -->
+      <li *ngIf="generalUser!==undefined && generalUser['isAdmin']===true" class="nav-item">
+        <a class="nav-link" [routerLink]="['admin']">Admin</a>
+      </li>
+    </ul>
+
+    <!-- Search box -->
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </div>
+
+</nav>
+

@@ -1,0 +1,22 @@
+<li *ngIf="!generalUser; else accountContent" class="nav-item">
+  <button (click)="login()" class="btn btn-primary">Login</button>
+</li>
+
+<ng-template #accountContent>
+  <li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+      aria-expanded="false">
+      {{ generalUser ? generalUser.name : null }}
+    </a>
+    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+      <a [routerLink]="['/myPosting', userId]" class="dropdown-item">My Posting</a>
+      <a [routerLink]="['/myBidding', userId]" class="dropdown-item">My Bidding</a>
+      <a routerLink="" class="dropdown-item">Saved Cars</a>
+      <a routerLink="" class="dropdown-item">Saved Search</a>
+      <div class="dropdown-divider"></div>
+
+      <!-- logout -->
+      <button (click)="logout()" class="btn btn-primary">Log Out</button>
+    </div>
+  </li>
+</ng-template>

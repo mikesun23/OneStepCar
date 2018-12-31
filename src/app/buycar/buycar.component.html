@@ -1,0 +1,22 @@
+
+<!-- functions: 
+  - list all the cars
+  - give all the popular categories
+  - show the filter bar on the left side of screen
+ -->
+  
+<li class="nav-item">
+  <a class="nav-link" routerLink="/showCarList">Buy</a>
+</li>
+
+<!-- if button Buy is clicked -->
+<ng-template>
+  <!-- filter bar -->
+  <app-filter-bar></app-filter-bar>
+</ng-template>
+
+<ng-template>
+  <!-- car list -->
+  <app-car-list></app-car-list>
+</ng-template>
+

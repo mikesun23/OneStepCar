@@ -1,0 +1,93 @@
+<div class="row">
+
+  <!-- user account menu column section-->
+  <div class="col-3">
+
+  </div>
+
+  <!-- posting list column section -->
+  <div class="col">
+    <div *ngFor="let post of postingList">
+      <div class="card">
+        <div class="row">
+
+          <!-- image section -->
+          <div class="col-6">
+            <img [src]="post['value']['imageUrlList']['0']" alt="no image" class="card-img">
+          </div>
+
+          <!-- summary section -->
+          <div class="col-6 card-body">
+
+            <h5 class="card-title">
+              {{post['value']['currentPrice'] | currency:'USD':'symbol':'1.0-0'}}
+              <span class="posting-mileage">
+                {{post['value']['carData']['detailInfo']['carMileageControl']}}miles
+              </span>
+            </h5>
+
+            <h6>
+              <span>{{
+                post['value']['carData']['makeYear']['carYearControl'] + ' ' +
+                post['value']['carData']['makeYear']['carMakeControl'] + ' ' +
+                post['value']['carData']['basicInfo']['carModelControl'] + ' ' +
+                post['value']['carData']['basicInfo']['carTrimControl']
+                }}</span>
+            </h6>
+
+            <li>
+              <span class="posting-detail-item">History report: </span> {{post['value']['reportFileUrl'] ? 'Yes' :
+              'No'}}
+            </li>
+
+            <li>
+              <span class="posting-detail-item">Exterior: </span>{{post['value']['carData']['detailInfo']['carExColorControl']}}
+            </li>
+
+            <li>
+              <span class="posting-detail-item">Interior: </span>{{post['value']['carData']['detailInfo']['carInColorControl']}}
+            </li>
+
+            <li>
+              <span class="posting-detail-item">Transmission: </span>{{post['value']['carData']['detailInfo']['carTransmissionControl']}}
+            </li>
+
+            <li>
+              <span class="posting-detail-item">Drivetrain: </span>{{post['value']['carData']['detailInfo']['carDrivetrainControl']}}
+            </li>
+
+            <li>
+              <span class="posting-detail-item">Location: </span>{{post['value']['geoAddress']['city'] + ' ' +
+              post['value']['geoAddress']['state'] + ' ' + post['value']['geoAddress']['zipcode']}}
+            </li>
+
+          </div>
+
+        </div>
+        <!-- <hr /> -->
+        <div class="row">
+          <!-- bidding section -->
+          <div class="col-3">
+            <!-- bidding section information/data feed in -->
+            <button class="btn btn-success" (click)="showSuggessionPrice()">Buyer Suggession</button>
+          </div>
+          <div class="col-3">
+            <!-- bidding section information/data feed in -->
+            <button class="btn btn-warning" (click)="scheduleMeeting()">Schedule Test-Drive</button>
+          </div>
+          <div class="col-3">
+            <!-- bidding section information/data feed in -->
+            <button class="btn btn-primary" (click)="editPosting()">Edit Posting</button>
+          </div>
+          <div class="col-3">
+            <!-- bidding section information/data feed in -->
+            <button class="btn btn-primary" (click)="navToDetailPage(post)">Preview Posting</button>
+          </div>
+        </div>
+      </div>
+
+      <hr />
+    </div>
+  </div>
+
+</div>

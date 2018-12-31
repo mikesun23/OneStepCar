@@ -1,0 +1,83 @@
+<!-- if the car data received -->
+<div *ngIf="car['data'].year + ' ' + car['data'].make + ' ' + car['data'].model as title" class="card">
+  <!-- if the car has image -->
+  <img *ngIf="car['data'].imageUrl" [src]="car['data'].imageUrl" alt="title" class="card-img-top">
+  
+  <!-- car card body -->
+  <div class="card-body">
+    <!-- car title -->
+    <h4 class="card-title">{{ title }}</h4>
+
+    <!-- car price -->
+    <p class="card-text">Listed Price: {{ car['data'].price | currency:'USD':'symbol' }} </p>
+    
+    <!-- bidding status other-->
+    <div [hidden]="biddingStatus !== 'processing'">
+      <p>Still Processing...</p>
+    </div>
+
+    <div [hidden]="biddingStatus !== 'unallowed'">
+      <p>Sorry, you don't have permission for bidding.</p>
+    </div>
+
+    <div [hidden]="biddingStatus !== 'biddedAlready'">
+      <p>You have already bidded this car!</p>
+    </div>
+
+    <div [hidden]="biddingStatus !== 'lackOfCounts'">
+      <p>You don't have enough bidding counts! Refill!</p>
+    </div>
+    
+    <!-- bidding status active  -->
+    <div [hidden]="biddingStatus !== 'active'">
+      <p class="card-text">Your suggesion as: </p>
+      <div class="input-group mb-3">
+        <div class="btn-group btn-group-toggle" data-toggle="buttons">
+          <label (click)="changeUserType('seller')" class="btn btn-outline-primary" [ngClass]="disableUserType ? 'disabled' : 'btn'"
+            [ngClass]="checked ? 'btn-primary' : 'btn'">
+            <input [disabled]="disableUserType" type="radio" name="options" id="option1">Seller
+          </label>
+          <label (click)="changeUserType('buyer')" class="btn btn-outline-primary" [ngClass]="disableUserType ? 'disabled' : 'btn'"
+            [ngClass]="checked ? 'btn-primary' : 'btn'">
+            <input [disabled]="disableUserType" type="radio" name="options" id="option2">Buyer
+          </label>
+        </div>
+      </div>
+
+      <div [hidden]="!userType">
+
+        <!-- price entering area -->
+        <div class="input-group mb-3">
+
+          <!-- prefix minus - sign -->
+          <div class="input-group-prepend">
+            <span>
+              <button [disabled]="disableBidding" (click)="decreasePrice(input)" class="btn btn-secondary">-</button>
+            </span>
+          </div>
+          <!-- prefix $ sign -->
+          <div class="input-group-prepend">
+            <span class="input-group-text">$</span>
+          </div>
+
+          <!-- price input -->
+          <input [disabled]="disableBidding" class="form-control" [ngClass]="initValue > 0 ? 'text-success' : 'text-danger'"
+            #input type="text" [(value)]="initValue">
+
+          <!-- sufix plus + sign -->
+          <div class="input-group-append">
+            <button [disabled]="disableBidding" (click)="increasePrice(input)" class="btn btn-secondary">+</button>
+          </div>
+
+        </div>
+
+        <button [disabled]="disableBidding" (click)="submitBidding()" class="btn btn-primary">Submit</button>
+      </div>
+    </div>
+
+    <div [hidden]="biddingStatus !== 'finished'">
+      <p>Thanks for your price!</p>
+    </div>
+  </div>
+  <!-- <app-bidding></app-bidding> -->
+</div>

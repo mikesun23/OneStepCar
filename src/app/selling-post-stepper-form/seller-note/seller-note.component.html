@@ -1,0 +1,393 @@
+<div class="card">
+  <div class="card-header">
+    Your Notes To Buyers
+  </div>
+
+  <div class="card-body">
+    <p>
+      <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#instructionCollapse"
+        aria-expanded="false" aria-controls="instructionCollapse">
+        Read Short Instructions
+      </button>
+    </p>
+    <div class="collapse" id="instructionCollapse">
+      <div class="card card-body">
+        <div class="alert alert-info">
+          <p>
+            This section derives from traditional "Seller's Notes" of car selling post.
+            It extracts key points that you may want to mention to buyers, in case you forget.
+            Only <b>Car Title Status</b> is required, other entries are <b><i>optional</i></b>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="card-body">
+
+    <div [formGroup]="sellerNoteForm">
+      <mat-accordion class="example-headers-align">
+        <mat-expansion-panel class="section-first" [expanded]="step === 0" (opened)="setStep(0)">
+
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              Vehicle Title Status
+            </mat-panel-title>
+            <mat-panel-description>
+              Select title status
+            </mat-panel-description>
+          </mat-expansion-panel-header>
+
+          <mat-form-field>
+            <mat-select placeholder="Car Title" [formControlName]="'titleStatus'" required>
+              <mat-option value="inhand">In hand.(fully owned)</mat-option>
+              <mat-option value="notinhand">Not in hand.(loaned/leased/financed)</mat-option>
+            </mat-select>
+          </mat-form-field>
+
+          <mat-action-row>
+            <button mat-button color="primary" (click)="nextStep()">Next</button>
+          </mat-action-row>
+        </mat-expansion-panel>
+
+        <mat-expansion-panel class="section-first" [expanded]="step === 1" (opened)="setStep(1)">
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              Car History Report
+            </mat-panel-title>
+            <mat-panel-description>
+              Upload report PDF file
+            </mat-panel-description>
+          </mat-expansion-panel-header>
+
+          <!-- part 1: instruction, show some steps -->
+          <div>
+            <ul class="list-group">
+              <li class="list-group-item">Step 1. Purchase vehicle report from <a href="https://www.carfax.com/">Carfax</a>
+                or
+                <a href="https://www.autocheck.com">Autocheck</a>.</li>
+              <li class="list-group-item">Step 2. Download report and save in PDF format.</li>
+              <li class="list-group-item">Step 3.
+                <label for="historyDoc" class="btn btn-primary">Upload Vehicle Report</label>
+                <input #historyDoc (change)="uploadReportFile($event)" id="historyDoc" type="file" class="btn btn-primary"
+                  accpet="application/pdf" style="visibility:hidden;" />
+              </li>
+            </ul>
+          </div>
+
+          <!-- part 4: preview  -->
+          <div *ngIf="reportFileRaw">
+            <pdf-viewer [src]="reportFileRaw" [render-text]="true" [show-all]="true" style="display: block;">
+            </pdf-viewer>
+          </div>
+
+          <mat-action-row>
+            <button mat-button color="warn" (click)="prevStep()">Previous</button>
+            <button mat-button color="primary" (click)="nextStep()">Next</button>
+          </mat-action-row>
+        </mat-expansion-panel>
+
+        <mat-expansion-panel class="section-first" [expanded]="step === 2" (opened)="setStep(2)" [formGroupName]="'conditions'">
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              Car Condtions
+            </mat-panel-title>
+            <mat-panel-description>
+              Both good and bad appeal for sell, so long they are real.
+            </mat-panel-description>
+          </mat-expansion-panel-header>
+
+          <p>
+            <mat-form-field>
+              <mat-hint>(optional)</mat-hint>
+              <input #wearOff matInput maxlength="100" placeholder="wire-off parts: tire, brake, etc" [formControlName]="'wearOff'">
+              <mat-hint align="end">{{wearOff.value.length}}/100</mat-hint>
+            </mat-form-field>
+          </p>
+          <p>
+            <mat-form-field>
+              <mat-hint>(optional)</mat-hint>
+              <input #exDamage matInput maxlength="100" placeholder="exterior damage: dent, scrach, etc"
+                [formControlName]="'exDamage'">
+              <mat-hint align="end">{{exDamage.value.length}}/100</mat-hint>
+            </mat-form-field>
+          </p>
+          <p>
+            <mat-form-field>
+              <mat-hint>(optional)</mat-hint>
+              <input #inDamage matInput maxlength="100" placeholder="interior damage: broken part, etc"
+                [formControlName]="'inDamage'">
+              <mat-hint align="end">{{inDamage.value.length}}/100</mat-hint>
+            </mat-form-field>
+          </p>
+          <p>
+            <mat-form-field>
+              <mat-hint>(optional)</mat-hint>
+              <input #storage matInput maxlength="100" placeholder="storage: indoor, outdoor, etc" [formControlName]="'storage'">
+              <mat-hint align="end">{{storage.value.length}}/100</mat-hint>
+            </mat-form-field>
+          </p>
+          <p>
+            <mat-form-field>
+              <mat-hint>(optional)</mat-hint>
+              <input #rust matInput maxlength="100" placeholder="rust condition: driven in snow, coastal area, etc"
+                [formControlName]="'rust'">
+              <mat-hint align="end">{{rust.value.length}}/100</mat-hint>
+            </mat-form-field>
+          </p>
+          <p>
+            <mat-form-field>
+              <mat-hint>(optional)</mat-hint>
+              <input #usage matInput maxlength="100" placeholder="usage: daily driver, weekend car, etc"
+                [formControlName]="'usage'">
+              <mat-hint align="end">{{usage.value.length}}/100</mat-hint>
+            </mat-form-field>
+          </p>
+          <p>
+            <mat-form-field>
+              <mat-hint>(optional)</mat-hint>
+              <input #service matInput maxlength="100" placeholder="service/maintenance: how often the car serviced?"
+                [formControlName]="'service'">
+              <mat-hint align="end">{{service.value.length}}/100</mat-hint>
+            </mat-form-field>
+          </p>
+
+          <mat-action-row>
+            <button mat-button color="warn" (click)="prevStep()">Previous</button>
+            <button mat-button color="primary" (click)="nextStep()">Next</button>
+          </mat-action-row>
+        </mat-expansion-panel>
+
+        <mat-expansion-panel class="section-first" [expanded]="step === 3" (opened)="setStep(3)">
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              Warranty & Maintenance Plan
+            </mat-panel-title>
+            <mat-panel-description>
+              If still valid, it's good to mention.
+            </mat-panel-description>
+          </mat-expansion-panel-header>
+
+          <p>
+            <mat-form-field>
+              <mat-hint>(optional)</mat-hint>
+              <input #warranty matInput maxlength="100" placeholder="General factory warranty expiration date"
+                [formControlName]="'warranty'">
+              <mat-hint align="end">{{warranty.value.length}}/100</mat-hint>
+            </mat-form-field>
+          </p>
+
+          <p>
+            <mat-form-field>
+              <mat-hint>(optional)</mat-hint>
+              <input #maintain matInput maxlength="100" placeholder="Is the maintenance plan transferrable? expiration date and mileage limits."
+                [formControlName]="'maintenance'">
+              <mat-hint align="end">{{maintain.value.length}}/100</mat-hint>
+            </mat-form-field>
+          </p>
+
+          <mat-action-row>
+            <button mat-button color="warn" (click)="prevStep()">Previous</button>
+            <button mat-button color="primary" (click)="nextStep()">Next</button>
+          </mat-action-row>
+        </mat-expansion-panel>
+
+        <mat-expansion-panel class="section-warning" [expanded]="step === 4" (opened)="setStep(4)" [formArrayName]="'modifications'">
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              Modification
+            </mat-panel-title>
+            <mat-panel-description>
+              May help increasing selling price.
+            </mat-panel-description>
+          </mat-expansion-panel-header>
+
+          <button (click)="addModification()" class="btn btn-primary">Add modification</button>
+
+          <div *ngFor="let m of sellerNoteForm.controls['modifications']['controls']; let i = index">
+            <div [formGroupName]="i">
+              <table cellspacing="2">
+                <tr>
+                  <td>
+                    <mat-form-field>
+                      <input matInput maxlength="100" placeholder="Mod name" [formControlName]="'name'">
+                    </mat-form-field>
+                  </td>
+                  <td>
+                    <mat-form-field><input matInput type="number" min="0" max="20000" placeholder="Original Price"
+                        [formControlName]="'originalPrice'"></mat-form-field>
+                  </td>
+                  <td>
+                    <mat-form-field>
+                      <mat-select placeholder="Sell Or Keep" [formControlName]="'sellingOrKeeping'">
+                        <mat-option value="keep">Keep</mat-option>
+                        <mat-option value="sell">Sell</mat-option>
+                      </mat-select>
+                    </mat-form-field>
+                  </td>
+                  <td>
+                    <mat-form-field><input matInput type="number" min="0" max="20000" placeholder="Selling Price"
+                        [formControlName]="'sellingPrice'"></mat-form-field>
+                  </td>
+                  <td>
+                    <button class="btn btn-danger" (click)="deleteCurrentMod(i)">Delete</button>
+                  </td>
+                </tr>
+              </table>
+            </div>
+
+
+          </div>
+
+
+          <mat-action-row>
+            <button mat-button color="warn" (click)="prevStep()">Previous</button>
+            <button mat-button color="primary" (click)="nextStep()">Next</button>
+          </mat-action-row>
+        </mat-expansion-panel>
+
+        <mat-expansion-panel class="section-warning" [expanded]="step === 5" (opened)="setStep(5)">
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              Reason You Buy
+            </mat-panel-title>
+            <mat-panel-description>
+              Could be same for others to buy.
+            </mat-panel-description>
+          </mat-expansion-panel-header>
+
+          <p>
+            <mat-form-field>
+              <mat-hint>(optional)</mat-hint>
+              <input #buyReason matInput maxlength="100" placeholder="The car is combination of comfortable daily driver and fun weekend car."
+                [formControlName]="'buyReason'">
+              <mat-hint align="end">{{buyReason.value.length}}/100</mat-hint>
+            </mat-form-field>
+          </p>
+
+          <mat-action-row>
+            <button mat-button color="warn" (click)="prevStep()">Previous</button>
+            <button mat-button color="primary" (click)="nextStep()">Next</button>
+          </mat-action-row>
+        </mat-expansion-panel>
+
+        <mat-expansion-panel class="section-warning" [expanded]="step === 6" (opened)="setStep(6)">
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              Reason You Sell
+            </mat-panel-title>
+            <mat-panel-description>
+              Give buyers peaceful mind.
+            </mat-panel-description>
+          </mat-expansion-panel-header>
+          <p>
+            <mat-form-field>
+              <mat-hint>(optional)</mat-hint>
+              <input #sellReason matInput maxlength="100" placeholder="Moving out of state, not bringing the car."
+                [formControlName]="'sellReason'">
+              <mat-hint align="end">{{sellReason.value.length}}/100</mat-hint>
+            </mat-form-field>
+          </p>
+
+          <mat-action-row>
+            <button mat-button color="warn" (click)="prevStep()">Previous</button>
+            <button mat-button color="primary" (click)="nextStep()">Next</button>
+          </mat-action-row>
+        </mat-expansion-panel>
+
+        <mat-expansion-panel class="section-success" [expanded]="step === 7" (opened)="setStep(7)">
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              Remote Sell
+            </mat-panel-title>
+            <mat-panel-description>
+              More effort but better gain.
+            </mat-panel-description>
+          </mat-expansion-panel-header>
+
+          <!-- will be some complicated design here -->
+
+          <p>
+            <mat-form-field>
+              <mat-hint>(optional)</mat-hint>
+              <input #remoteSell matInput maxlength="200" placeholder="available or not, transportation cost support/compensation, range, etc."
+                [formControlName]="'remoteSell'">
+              <mat-hint align="end">{{remoteSell.value.length}}/200</mat-hint>
+            </mat-form-field>
+          </p>
+
+          <mat-action-row>
+            <button mat-button color="warn" (click)="prevStep()">Previous</button>
+            <button mat-button color="primary" (click)="nextStep()">Next</button>
+          </mat-action-row>
+        </mat-expansion-panel>
+
+        <mat-expansion-panel class="section-success" [expanded]="step === 8" (opened)="setStep(8)" [formArrayName]="'sellingPoints'">
+          <mat-expansion-panel-header>
+            <mat-panel-title>Special/Attractive Selling Points</mat-panel-title>
+            <mat-panel-description>Will be put at the top.</mat-panel-description>
+          </mat-expansion-panel-header>
+
+          <button (click)="addSellingPoint()" class="btn btn-primary">Add Description</button>
+
+          <div *ngFor="let s of sellerNoteForm.controls['sellingPoints']['controls']; let i = index">
+
+            <div class="row">
+              <div class="col">
+                <mat-form-field>
+                  <input matInput maxlength="100" placeholder="Description" [formControlName]="i">
+                </mat-form-field>
+              </div>
+              <div class="col-2">
+                <button (click)="deleteSellingPoint(i)" class="btn btn-danger">Delete</button>
+              </div>
+            </div>
+          </div>
+
+          <mat-action-row>
+            <button mat-button color="warn" (click)="prevStep()">Previous</button>
+            <button mat-button color="primary" (click)="nextStep()">Next</button>
+          </mat-action-row>
+
+        </mat-expansion-panel>
+
+        <mat-expansion-panel class="section-success" [expanded]="step === 9" (opened)="setStep(9)">
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              Extra Note
+            </mat-panel-title>
+            <mat-panel-description>
+              Anything else beside above content.(probably not, LOL)
+            </mat-panel-description>
+
+
+
+          </mat-expansion-panel-header>
+
+          <p>
+            <mat-form-field>
+              <mat-hint>(optional)</mat-hint>
+              <input #extraNote matInput maxlength="250" placeholder="Textarea" [formControlName]="'extraNote'">
+              <mat-hint align="end">{{extraNote.value.length}}/250</mat-hint>
+            </mat-form-field>
+          </p>
+
+          <mat-action-row>
+            <button mat-button color="warn" (click)="prevStep()">Previous</button>
+            <button mat-button color="primary" (click)="nextStep()">End</button>
+          </mat-action-row>
+        </mat-expansion-panel>
+
+      </mat-accordion>
+
+    </div>
+
+    <div>
+      <mat-error *ngIf="sellerNoteForm.controls['titleStatus'].hasError('required')">Please choose Car Title Status!</mat-error>
+      <button mat-stroked-button color="primary" (click)="goBackStep()" matStepperPrevious>Back</button>
+      <button mat-stroked-button color="primary" (click)="onSubmit()" [disabled]="sellerNoteForm.controls['titleStatus'].value==='' || 
+        sellerNoteForm.controls['titleStatus'].value===null"
+        matStepperNext>Next</button>
+    </div>
+
+  </div>
+</div>

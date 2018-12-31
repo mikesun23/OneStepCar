@@ -1,0 +1,11 @@
+.logo-img {
+  height: auto;
+  max-width: 100%;
+}
+
+.feature-detail-button {
+  position: absolute;
+  right: 10px;
+  left: auto;
+}
+

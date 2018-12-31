@@ -1,0 +1,104 @@
+<div class="card">
+
+  <h5 class="card-header">Detail Review</h5>
+
+  <div class="card-body">
+    <div id="reviewImageCarousel" class="carousel slide" data-ride="carousel" data-interval="false">
+      <ol class="carousel-indicators">
+        <li *ngFor="let x of imageUrlList; let i = index" data-target="#reviewImageCarousel" [attr.data-slide-to]="i"
+          [class]="i===0 ? 'active' : ''"></li>
+      </ol>
+
+      <div class="carousel-inner">
+        <div [class]="i===0 ? 'active carousel-item' : 'carousel-item' " *ngFor="let image of imageUrlList; let i = index">
+          <img [src]="image" alt="" class="d-block w-100">
+        </div>
+      </div>
+
+      <a class="carousel-control-prev" href="#reviewImageCarousel" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#reviewImageCarousel" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+    <h5 class="card-header">{{carTitle}}</h5>
+    <div class="card-body">
+      <p>
+        <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#basicInformation"
+          aria-expanded="true" aria-controls="basicInformation">
+          Basic Information
+        </button>&nbsp;
+        <button class="btn btn-success" type="button" data-toggle="collapse" data-target="#detailInformation"
+          aria-expanded="false" aria-controls="detailInformation">
+          Detail Information
+        </button>&nbsp;
+        <button class="btn btn-warning" type="button" data-toggle="collapse" data-target="#packageInformation"
+          aria-expanded="false" aria-controls="packageInformation">
+          Package Information
+        </button>
+      </p>
+
+      <div class="collapse" id="basicInformation">
+        <div class="card card-body">
+          <ul class="list-group">
+            <li class="list-group-item">
+              <p><b>{{basicInformation.price.key }}</b>{{': ' + (basicInformation.price.value |
+                currency:'USD':'symbol':'1.0-0')}} </p>
+            </li>
+            <li class="list-group-item">
+              <p><b>{{basicInformation.vin.key }}</b>{{': ' + basicInformation.vin.value}}</p>
+            </li>
+            <li class="list-group-item">
+              <p><b>{{basicInformation.mileage.key }}</b>{{': ' + basicInformation.mileage.value + ' miles'}}</p>
+            </li>
+            <li class="list-group-item">
+              <p><b>{{'Address: '}}</b>{{basicInformation.address.value['address']+ ', '
+                + basicInformation.address.value['city'] + ', '
+                + basicInformation.address.value['state'] + ' '
+                + basicInformation.address.value['zipcode']}}</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="collapse" id="detailInformation">
+        <div class="card card-body">
+          <ul class="list-group">
+            <li class="list-group-item">
+              <p>
+                <b>{{detailInformation.exColor.key}}</b>{{': ' + detailInformation.exColor.value}}
+              </p>
+            </li>
+            <li class="list-group-item">
+              <p><b>{{detailInformation.inColor.key}}</b>{{': ' + detailInformation.inColor.value}}</p>
+            </li>
+            <li class="list-group-item">
+              <p><b>{{detailInformation.transmission.key}}</b>{{': ' + detailInformation.transmission.value}}</p>
+            </li>
+            <li class="list-group-item">
+              <p><b>{{detailInformation.cylinder.key}}</b>{{': ' + detailInformation.cylinder.value}}</p>
+            </li>
+            <li class="list-group-item">
+              <p><b>{{detailInformation.drivetrain.key}}</b>{{': ' + detailInformation.drivetrain .value}}</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="collapse" id="packageInformation">
+        <div class="card card-body">
+          <ul class="list-group" *ngFor="let p of packageInformation | keyvalue">
+            <li class="list-group-item" *ngIf="p.value">
+              <p><b>Package:</b>{{' ' + p.key}}</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+</div>

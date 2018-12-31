@@ -1,0 +1,57 @@
+<div *ngIf="currentUser.allowBidding && currentUser.biddingCounts>0 && !repetBidding && !bidSubmited; else noBidding"
+  class="card-body">
+  <h6 class="card-title">Your suggesion price: </h6>
+  <p class="card-text">(-/+ based on listed price):</p>
+  <div class="input-group mb-3">
+
+    <div class="input-group mb-3">
+
+      <!-- prefix minus - sign -->
+      <div class="input-group-prepend">
+        <span>
+          <button (click)="decreasePrice(input)" class="btn btn-secondary">-</button>
+        </span>
+      </div>
+      <!-- prefix $ sign -->
+      <div class="input-group-prepend">
+        <span class="input-group-text">$</span>
+      </div>
+
+      <!-- price input -->
+      <input class="form-control" [ngClass]="initValue > 0 ? 'text-success' : 'text-danger'"
+        #input type="text" [(value)]="initValue">
+
+      <!-- sufix plus + sign -->
+      <div class="input-group-append">
+        <button (click)="increasePrice(input)" class="btn btn-secondary">+</button>
+      </div>
+
+    </div>
+
+    <button (click)="submitBidding()" class="btn btn-primary">Submit</button>
+
+
+  </div>
+</div>
+
+<!-- not allow bidding condition messages: -->
+<ng-template #noBidding>
+  <div *ngIf="!bidSubmited" class="card card-body">
+    <ul class="list-group">
+      <!-- allowBidding == false -->
+      <li *ngIf="currentUser.allowBidding===false" class="list-group-item">
+        <p>Currently you are not allowed for price suggesion, you need log in.</p>
+      </li>
+      <li *ngIf="currentUser.biddingCounts<=0" class="list-group-item">
+        <p>You don't have enough attempts for price suggesion, check instruction.</p>
+      </li>
+      <li *ngIf="repetBidding===true" class="list-group-item">
+        <p>You suggested this car before, no repetitive suggesion.</p>
+      </li>
+    </ul>
+  </div>
+</ng-template>
+<!-- bidding submited, next step instruction -->
+<div *ngIf="bidSubmited" class="card card-body">
+  <p>Awesome! check for next step!</p>
+</div>

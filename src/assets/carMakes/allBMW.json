@@ -1,0 +1,2990 @@
+{
+  "2006": {
+    "3-Series": {
+      "models": [
+        {
+          "325": [
+            "Ci",
+            "i",
+            "xi",
+            "xiT"
+          ]
+        },
+        {
+          "330": [
+            "Ci",
+            "i",
+            "xi"
+          ]
+        }
+      ]
+    },
+    "5-Series": {
+      "models": [
+        {
+          "525": [
+            "i",
+            "xi"
+          ]
+        },
+        {
+          "530": [
+            "i",
+            "xi",
+            "xiT"
+          ]
+        },
+        {
+          "550": [
+            "i"
+          ]
+        },
+        {
+          "M5": [
+            ""
+          ]
+        }
+      ]
+    },
+    "6-Series": {
+      "models": [
+        {
+          "650": [
+            "i"
+          ]
+        }
+      ]
+    },
+    "7-Series": {
+      "models": [
+        {
+          "750": [
+            "Li",
+            "i"
+          ]
+        },
+        {
+          "760": [
+            "Li"
+          ]
+        }
+      ]
+    },
+    "X-Series": {
+      "models": [
+        {
+          "X3": [
+            "3.0si"
+          ]
+        },
+        {
+          "X5": [
+            "3.0si",
+            "4.4i",
+            "4.8is"
+          ]
+        }
+      ]
+    },
+    "M-series": {
+      "models": [
+        {
+          "M3": [
+            ""
+          ]
+        },
+        {
+          "M5": [
+            ""
+          ]
+        },
+        {
+          "M6": [
+            ""
+          ]
+        },
+        {
+          "Z4 M": [
+            "Coupe",
+            "Roadster"
+          ]
+        }
+      ]
+    },
+    "Z-series": {
+      "models": [
+        {
+          "Z4": [
+            "3.0i",
+            "3.0i Roadster",
+            "3.0si",
+            "3.0si Roadster"
+          ]
+        },
+        {
+          "Z4 M": [
+            "Coupe",
+            "Roadster"
+          ]
+        }
+      ]
+    }
+  },
+  "2007": {
+    "3-Series": {
+      "models": [
+        {
+          "328": [
+            "i",
+            "xi"
+          ]
+        },
+        {
+          "335": [
+            "i",
+            "xi"
+          ]
+        }
+      ]
+    },
+    "5-Series": {
+      "models": [
+        {
+          "525": [
+            "i",
+            "xi"
+          ]
+        },
+        {
+          "530": [
+            "i",
+            "xi",
+            "xiT"
+          ]
+        },
+        {
+          "550": [
+            "i"
+          ]
+        },
+        {
+          "M5": [
+            ""
+          ]
+        }
+      ]
+    },
+    "6-Series": {
+      "models": [
+        {
+          "650": [
+            "i"
+          ]
+        }
+      ]
+    },
+    "7-Series": {
+      "models": [
+        {
+          "750": [
+            "Li",
+            "i"
+          ]
+        },
+        {
+          "760": [
+            "Li"
+          ]
+        }
+      ]
+    },
+    "ALPINA": {
+      "models": [
+        {
+          "ALPINA B7": [
+            ""
+          ]
+        }
+      ]
+    },
+    "X-Series": {
+      "models": [
+        {
+          "X3": [
+            "3.0si"
+          ]
+        },
+        {
+          "X5": [
+            "3.0si",
+            "4.8i"
+          ]
+        }
+      ]
+    },
+    "M-series": {
+      "models": [
+        {
+          "M5": [
+            ""
+          ]
+        },
+        {
+          "M6": [
+            ""
+          ]
+        },
+        {
+          "Z4 M": [
+            "Coupe",
+            "Roadster"
+          ]
+        }
+      ]
+    },
+    "Z-series": {
+      "models": [
+        {
+          "Z4": [
+            "3.0i",
+            "3.0i Roadster",
+            "3.0si",
+            "3.0si Roadster"
+          ]
+        },
+        {
+          "Z4 M": [
+            "Coupe",
+            "Roadster"
+          ]
+        }
+      ]
+    }
+  },
+  "2008": {
+    "1-Series": {
+      "models": [
+        {
+          "128": [
+            "i"
+          ]
+        },
+        {
+          "135": [
+            "i"
+          ]
+        }
+      ]
+    },
+    "3-Series": {
+      "models": [
+        {
+          "328": [
+            "i",
+            "xi"
+          ]
+        },
+        {
+          "335": [
+            "i",
+            "xi"
+          ]
+        },
+        {
+          "M3": [
+            ""
+          ]
+        }
+      ]
+    },
+    "5-Series": {
+      "models": [
+        {
+          "528": [
+            "i",
+            "xi"
+          ]
+        },
+        {
+          "535": [
+            "i",
+            "xi"
+          ]
+        },
+        {
+          "550": [
+            "i"
+          ]
+        },
+        {
+          "M5": [
+            ""
+          ]
+        }
+      ]
+    },
+    "6-Series": {
+      "models": [
+        {
+          "650": [
+            "i"
+          ]
+        }
+      ]
+    },
+    "7-Series": {
+      "models": [
+        {
+          "750": [
+            "Li",
+            "i"
+          ]
+        },
+        {
+          "760": [
+            "Li"
+          ]
+        }
+      ]
+    },
+    "ALPINA": {
+      "models": [
+        {
+          "ALPINA B7": [
+            ""
+          ]
+        }
+      ]
+    },
+    "X-Series": {
+      "models": [
+        {
+          "X3": [
+            "3.0si"
+          ]
+        },
+        {
+          "X5": [
+            "3.0si",
+            "4.8i"
+          ]
+        },
+        {
+          "X6": [
+            "xDrive 35i",
+            "xDrive 50i"
+          ]
+        }
+      ]
+    },
+    "M-series": {
+      "models": [
+        {
+          "M3": [
+            ""
+          ]
+        },
+        {
+          "M5": [
+            ""
+          ]
+        },
+        {
+          "M6": [
+            ""
+          ]
+        },
+        {
+          "Z4 M": [
+            "Coupe",
+            "Roadster"
+          ]
+        }
+      ]
+    },
+    "Z-series": {
+      "models": [
+        {
+          "Z4": [
+            "3.0i",
+            "3.0i Roadster",
+            "3.0si",
+            "3.0si Roadster"
+          ]
+        },
+        {
+          "Z4 M": [
+            "Coupe",
+            "Roadster"
+          ]
+        }
+      ]
+    }
+  },
+  "2009": {
+    "1-Series": {
+      "models": [
+        {
+          "128": [
+            "i"
+          ]
+        },
+        {
+          "135": [
+            "i"
+          ]
+        }
+      ]
+    },
+    "3-Series": {
+      "models": [
+        {
+          "328": [
+            "i",
+            "i xDrive"
+          ]
+        },
+        {
+          "335": [
+            "d",
+            "i",
+            "i xDrive"
+          ]
+        },
+        {
+          "M3": [
+            ""
+          ]
+        }
+      ]
+    },
+    "5-Series": {
+      "models": [
+        {
+          "528": [
+            "i",
+            "i xDrive"
+          ]
+        },
+        {
+          "535": [
+            "i",
+            "i xDrive"
+          ]
+        },
+        {
+          "550": [
+            "i"
+          ]
+        },
+        {
+          "M5": [
+            ""
+          ]
+        }
+      ]
+    },
+    "6-Series": {
+      "models": [
+        {
+          "650": [
+            "i"
+          ]
+        }
+      ]
+    },
+    "7-Series": {
+      "models": [
+        {
+          "750": [
+            "Li",
+            "Li xDrive"
+          ]
+        }
+      ]
+    },
+    "X-Series": {
+      "models": [
+        {
+          "X3": [
+            "xDrive 30i"
+          ]
+        },
+        {
+          "X5": [
+            "xDrive 30i",
+            "xDrive 35d",
+            "xDrive 48i"
+          ]
+        },
+        {
+          "X6": [
+            "xDrive 35i",
+            "xDrive 50i"
+          ]
+        }
+      ]
+    },
+    "M-series": {
+      "models": [
+        {
+          "M3": [
+            ""
+          ]
+        },
+        {
+          "M5": [
+            ""
+          ]
+        },
+        {
+          "M6": [
+            ""
+          ]
+        }
+      ]
+    },
+    "Z-series": {
+      "models": [
+        {
+          "Z4": [
+            "sDrive 30i",
+            "sDrive 35i"
+          ]
+        }
+      ]
+    }
+  },
+  "2010": {
+    "1-Series": {
+      "models": [
+        {
+          "128": [
+            "i"
+          ]
+        },
+        {
+          "135": [
+            "i"
+          ]
+        }
+      ]
+    },
+    "3-Series": {
+      "models": [
+        {
+          "328": [
+            "i",
+            "i xDrive"
+          ]
+        },
+        {
+          "335": [
+            "d",
+            "i",
+            "i xDrive"
+          ]
+        },
+        {
+          "M3": [
+            ""
+          ]
+        }
+      ]
+    },
+    "5-Series": {
+      "models": [
+        {
+          "528": [
+            "i",
+            "i xDrive"
+          ]
+        },
+        {
+          "535": [
+            "i",
+            "i xDrive"
+          ]
+        },
+        {
+          "535 Gran Turismo": [
+            "i"
+          ]
+        },
+        {
+          "550": [
+            "i"
+          ]
+        },
+        {
+          "550 Gran Turismo": [
+            "i",
+            "i xDrive"
+          ]
+        },
+        {
+          "M5": [
+            ""
+          ]
+        }
+      ]
+    },
+    "6-Series": {
+      "models": [
+        {
+          "650": [
+            "i"
+          ]
+        }
+      ]
+    },
+    "7-Series": {
+      "models": [
+        {
+          "750": [
+            "Li",
+            "Li xDrive",
+            "i",
+            "i xDrive"
+          ]
+        },
+        {
+          "760": [
+            "Li"
+          ]
+        }
+      ]
+    },
+    "X-Series": {
+      "models": [
+        {
+          "X3": [
+            "xDrive 30i"
+          ]
+        },
+        {
+          "X5": [
+            "xDrive 30i",
+            "xDrive 35d",
+            "xDrive 48i"
+          ]
+        },
+        {
+          "X6": [
+            "ActiveHybrid",
+            "xDrive 35i",
+            "xDrive 50i"
+          ]
+        },
+        {
+          "X5 M": [
+            ""
+          ]
+        },
+        {
+          "X6 M": [
+            ""
+          ]
+        }
+      ]
+    },
+    "M-series": {
+      "models": [
+        {
+          "M3": [
+            ""
+          ]
+        },
+        {
+          "M5": [
+            ""
+          ]
+        },
+        {
+          "M6": [
+            ""
+          ]
+        },
+        {
+          "X5 M": [
+            ""
+          ]
+        },
+        {
+          "X6 M": [
+            ""
+          ]
+        }
+      ]
+    },
+    "Z-series": {
+      "models": [
+        {
+          "Z4": [
+            "sDrive 30i",
+            "sDrive 35i"
+          ]
+        }
+      ]
+    }
+  },
+  "2011": {
+    "1-Series": {
+      "models": [
+        {
+          "128": [
+            "i"
+          ]
+        },
+        {
+          "135": [
+            "i"
+          ]
+        },
+        {
+          "1M": [
+            ""
+          ]
+        }
+      ]
+    },
+    "3-Series": {
+      "models": [
+        {
+          "328": [
+            "i",
+            "i xDrive"
+          ]
+        },
+        {
+          "335": [
+            "d",
+            "i",
+            "i xDrive",
+            "is"
+          ]
+        },
+        {
+          "M3": [
+            ""
+          ]
+        }
+      ]
+    },
+    "5-Series": {
+      "models": [
+        {
+          "528": [
+            "i"
+          ]
+        },
+        {
+          "535": [
+            "i",
+            "i xDrive"
+          ]
+        },
+        {
+          "535 Gran Turismo": [
+            "i",
+            "i xDrive"
+          ]
+        },
+        {
+          "550": [
+            "i",
+            "i xDrive"
+          ]
+        },
+        {
+          "550 Gran Turismo": [
+            "i",
+            "i xDrive"
+          ]
+        },
+        {
+          "M5": [
+            ""
+          ]
+        }
+      ]
+    },
+    "7-Series": {
+      "models": [
+        {
+          "740": [
+            "Li",
+            "i"
+          ]
+        },
+        {
+          "750": [
+            "Li",
+            "Li xDrive",
+            "i",
+            "i xDrive"
+          ]
+        },
+        {
+          "760": [
+            "Li"
+          ]
+        }
+      ]
+    },
+    "ALPINA": {
+      "models": [
+        {
+          "ALPINA B7": [
+            "SWB",
+            "xDrive SWB",
+            "LWB",
+            "xDrive LWB"
+          ]
+        }
+      ]
+    },
+    "ActiveHybrid": {
+      "models": [
+        {
+          "ActiveHybrid X6": [
+            ""
+          ]
+        },
+        {
+          "ActiveHybrid 750": [
+            "i"
+          ]
+        }
+      ]
+    },
+    "X-Series": {
+      "models": [
+        {
+          "X3": [
+            "xDrive 28i",
+            "xDrive 35i"
+          ]
+        },
+        {
+          "X5": [
+            "xDrive 35i Sport Activity",
+            "xDrive 35d",
+            "xDrive 35i",
+            "xDrive 35i Premium",
+            "xDrive 50i"
+          ]
+        },
+        {
+          "X6": [
+            "35i",
+            "50i",
+            "xDrive 35i",
+            "xDrive 50i"
+          ]
+        },
+        {
+          "X5 M": [
+            ""
+          ]
+        },
+        {
+          "X6 M": [
+            ""
+          ]
+        }
+      ]
+    },
+    "M-series": {
+      "models": [
+        {
+          "M3": [
+            ""
+          ]
+        },
+        {
+          "X5 M": [
+            ""
+          ]
+        },
+        {
+          "X6 M": [
+            ""
+          ]
+        }
+      ]
+    },
+    "Z-series": {
+      "models": [
+        {
+          "Z4": [
+            "sDrive 30i",
+            "sDrive 35i",
+            "sDrive 35is"
+          ]
+        }
+      ]
+    }
+  },
+  "2012": {
+    "1-Series": {
+      "models": [
+        {
+          "128": [
+            "i"
+          ]
+        },
+        {
+          "135": [
+            "i"
+          ]
+        }
+      ]
+    },
+    "3-Series": {
+      "models": [
+        {
+          "328": [
+            "i",
+            "i xDrive"
+          ]
+        },
+        {
+          "335": [
+            "i",
+            "i xDrive",
+            "is"
+          ]
+        },
+        {
+          "M3": [
+            ""
+          ]
+        }
+      ]
+    },
+    "5-Series": {
+      "models": [
+        {
+          "528": [
+            "i",
+            "i xDrive"
+          ]
+        },
+        {
+          "535": [
+            "i",
+            "i xDrive"
+          ]
+        },
+        {
+          "535 Gran Turismo": [
+            "i",
+            "i xDrive"
+          ]
+        },
+        {
+          "550": [
+            "i",
+            "i xDrive"
+          ]
+        },
+        {
+          "550 Gran Turismo": [
+            "i",
+            "i xDrive"
+          ]
+        },
+        {
+          "M5": [
+            ""
+          ]
+        }
+      ]
+    },
+    "6-Series": {
+      "models": [
+        {
+          "640": [
+            "i"
+          ]
+        },
+        {
+          "650": [
+            "i",
+            "i xDrive"
+          ]
+        }
+      ]
+    },
+    "7-Series": {
+      "models": [
+        {
+          "740": [
+            "Li",
+            "i"
+          ]
+        },
+        {
+          "750": [
+            "Li",
+            "Li xDrive",
+            "i",
+            "i xDrive"
+          ]
+        },
+        {
+          "760": [
+            "Li"
+          ]
+        }
+      ]
+    },
+    "ALPINA": {
+      "models": [
+        {
+          "ALPINA B7": [
+            "SWB",
+            "xDrive SWB",
+            "LWB",
+            "xDrive LWB"
+          ]
+        }
+      ]
+    },
+    "X-Series": {
+      "models": [
+        {
+          "X3": [
+            "xDrive 28i",
+            "xDrive 35i"
+          ]
+        },
+        {
+          "X5": [
+            "35i",
+            "50i",
+            "xDrive 35i Sport Activity",
+            "xDrive 35d",
+            "xDrive 35i",
+            "xDrive 35i Premium",
+            "xDrive 50i"
+          ]
+        },
+        {
+          "X6": [
+            "35i",
+            "50i",
+            "xDrive 35i",
+            "xDrive 50i"
+          ]
+        },
+        {
+          "X5 M": [
+            ""
+          ]
+        },
+        {
+          "X6 M": [
+            ""
+          ]
+        }
+      ]
+    },
+    "M-series": {
+      "models": [
+        {
+          "M3": [
+            ""
+          ]
+        },
+        {
+          "M6": [
+            ""
+          ]
+        },
+        {
+          "X5 M": [
+            ""
+          ]
+        },
+        {
+          "X6 M": [
+            ""
+          ]
+        }
+      ]
+    },
+    "Z-series": {
+      "models": [
+        {
+          "Z4": [
+            "sDrive 28i",
+            "sDrive 35i",
+            "sDrive 35is"
+          ]
+        }
+      ]
+    }
+  },
+  "2013": {
+    "1-Series": {
+      "models": [
+        {
+          "128": [
+            "i"
+          ]
+        },
+        {
+          "135": [
+            "i",
+            "is"
+          ]
+        }
+      ]
+    },
+    "3-Series": {
+      "models": [
+        {
+          "320": [
+            "i",
+            "i xDrive"
+          ]
+        },
+        {
+          "328": [
+            "i",
+            "i xDrive"
+          ]
+        },
+        {
+          "335": [
+            "i",
+            "i xDrive"
+          ]
+        },
+        {
+          "M3": [
+            ""
+          ]
+        }
+      ]
+    },
+    "5-Series": {
+      "models": [
+        {
+          "528": [
+            "i",
+            "i xDrive"
+          ]
+        },
+        {
+          "535": [
+            "i",
+            "i xDrive"
+          ]
+        },
+        {
+          "535 Gran Turismo": [
+            "i",
+            "i xDrive"
+          ]
+        },
+        {
+          "550": [
+            "i",
+            "i xDrive"
+          ]
+        },
+        {
+          "550 Gran Turismo": [
+            "i",
+            "i xDrive"
+          ]
+        },
+        {
+          "M5": [
+            ""
+          ]
+        }
+      ]
+    },
+    "6-Series": {
+      "models": [
+        {
+          "640": [
+            "i"
+          ]
+        },
+        {
+          "640 Gran Coupe": [
+            "i"
+          ]
+        },
+        {
+          "650": [
+            "i",
+            "i xDrive"
+          ]
+        },
+        {
+          "650 Gran Coupe": [
+            "i",
+            "i xDrive"
+          ]
+        },
+        {
+          "M6": [
+            ""
+          ]
+        }
+      ]
+    },
+    "7-Series": {
+      "models": [
+        {
+          "740": [
+            "Li",
+            "Li xDrive",
+            "i"
+          ]
+        },
+        {
+          "750": [
+            "Li",
+            "Li xDrive",
+            "i",
+            "i xDrive"
+          ]
+        },
+        {
+          "760": [
+            "Li"
+          ]
+        }
+      ]
+    },
+    "ALPINA": {
+      "models": [
+        {
+          "ALPINA B7": [
+            "SWB",
+            "xDrive SWB",
+            "LWB",
+            "xDrive LWB"
+          ]
+        }
+      ]
+    },
+    "ActiveHybrid": {
+      "models": [
+        {
+          "ActiveHybrid 3": [
+            ""
+          ]
+        },
+        {
+          "ActiveHybrid 5": [
+            ""
+          ]
+        }
+      ]
+    },
+    "X-Series": {
+      "models": [
+        {
+          "X3": [
+            "sDrive 28i",
+            "xDrive 28i",
+            "xDrive 35i"
+          ]
+        },
+        {
+          "X5": [
+            "xDrive 35i Sport Activity",
+            "xDrive 35d",
+            "xDrive 35i",
+            "xDrive 35i Premium",
+            "xDrive 50i"
+          ]
+        },
+        {
+          "X6": [
+            "xDrive 35i",
+            "xDrive 50i"
+          ]
+        },
+        {
+          "X5 M": [
+            ""
+          ]
+        },
+        {
+          "X6 M": [
+            ""
+          ]
+        }
+      ]
+    },
+    "M-series": {
+      "models": [
+        {
+          "M3": [
+            ""
+          ]
+        },
+        {
+          "M5": [
+            ""
+          ]
+        },
+        {
+          "M6": [
+            ""
+          ]
+        },
+        {
+          "X5 M": [
+            ""
+          ]
+        },
+        {
+          "X6 M": [
+            ""
+          ]
+        }
+      ]
+    },
+    "Z-series": {
+      "models": [
+        {
+          "Z4": [
+            "sDrive 28i",
+            "sDrive 35i",
+            "sDrive 35is"
+          ]
+        }
+      ]
+    }
+  },
+  "2014": {
+    "1-Series": {},
+    "2-Series": {
+      "models": [
+        {
+          "228": [
+            "i"
+          ]
+        },
+        {
+          "M235": [
+            ""
+          ]
+        }
+      ]
+    },
+    "3-Series": {
+      "models": [
+        {
+          "320": [
+            "i",
+            "i xDrive"
+          ]
+        },
+        {
+          "328": [
+            "i",
+            "i xDrive"
+          ]
+        },
+        {
+          "328 Gran Turismo": [
+            "i xDrive"
+          ]
+        },
+        {
+          "328d": [
+            "base",
+            "xDrive"
+          ]
+        },
+        {
+          "335": [
+            "i",
+            "i xDrive"
+          ]
+        },
+        {
+          "335 Gran Turismo": [
+            "i xDrive"
+          ]
+        }
+      ]
+    },
+    "4-Series": {
+      "models": [
+        {
+          "428": [
+            "i",
+            "i xDrive"
+          ]
+        },
+        {
+          "435": [
+            "i",
+            "i xDrive"
+          ]
+        }
+      ]
+    },
+    "5-Series": {
+      "models": [
+        {
+          "528": [
+            "i",
+            "i xDrive"
+          ]
+        },
+        {
+          "535": [
+            "i",
+            "i xDrive"
+          ]
+        },
+        {
+          "535 Gran Turismo": [
+            "i",
+            "i xDrive"
+          ]
+        },
+        {
+          "535d": [
+            "xDrive"
+          ]
+        },
+        {
+          "550": [
+            "i",
+            "i xDrive"
+          ]
+        },
+        {
+          "550 Gran Turismo": [
+            "i",
+            "i xDrive"
+          ]
+        },
+        {
+          "M5": [
+            ""
+          ]
+        }
+      ]
+    },
+    "6-Series": {
+      "models": [
+        {
+          "640": [
+            "i",
+            "i xDrive"
+          ]
+        },
+        {
+          "640 Gran Coupe": [
+            "i",
+            "i xDrive"
+          ]
+        },
+        {
+          "650": [
+            "i",
+            "i xDrive"
+          ]
+        },
+        {
+          "650 Gran Coupe": [
+            "i",
+            "i xDrive"
+          ]
+        },
+        {
+          "M6": [
+            ""
+          ]
+        },
+        {
+          "M6 Gran Coupe": [
+            ""
+          ]
+        }
+      ]
+    },
+    "7-Series": {
+      "models": [
+        {
+          "740": [
+            "Li",
+            "Li xDrive",
+            "i"
+          ]
+        },
+        {
+          "750": [
+            "Li",
+            "Li xDrive",
+            "i",
+            "i xDrive"
+          ]
+        },
+        {
+          "760": [
+            "Li"
+          ]
+        }
+      ]
+    },
+    "ALPINA": {
+      "models": [
+        {
+          "ALPINA B7": [
+            "Li xDrive",
+            "xDrive"
+          ]
+        }
+      ]
+    },
+    "ActiveHybrid": {
+      "models": [
+        {
+          "ActiveHybrid 3": [
+            ""
+          ]
+        },
+        {
+          "ActiveHybrid 7": [
+            "Li"
+          ]
+        }
+      ]
+    },
+    "X-Series": {
+      "models": [
+        {
+          "X1": [
+            "sDrive 28i",
+            "xDrive 28i",
+            "xDrive 35i"
+          ]
+        },
+        {
+          "X3": [
+            "xDrive 28i",
+            "xDrive 35i"
+          ]
+        },
+        {
+          "X5": [
+            "sDrive 35i",
+            "xDrive 35d",
+            "xDrive 35i",
+            "xDrive 50i"
+          ]
+        },
+        {
+          "X6": [
+            "xDrive 35i",
+            "xDrive 50i"
+          ]
+        },
+        {
+          "X6 M": [
+            ""
+          ]
+        }
+      ]
+    },
+    "i-Series": {
+      "models": [
+        {
+          "i3": [
+            "base",
+            "base w/Range Extender"
+          ]
+        },
+        {
+          "i8": [
+            ""
+          ]
+        }
+      ]
+    },
+    "M-series": {
+      "models": [
+        {
+          "M235": [
+            ""
+          ]
+        },
+        {
+          "M5": [
+            ""
+          ]
+        },
+        {
+          "M6": [
+            ""
+          ]
+        },
+        {
+          "M6 Gran Coupe": [
+            ""
+          ]
+        },
+        {
+          "X6 M": [
+            ""
+          ]
+        }
+      ]
+    },
+    "Z-series": {
+      "models": [
+        {
+          "Z4": [
+            "sDrive 28i",
+            "sDrive 35i",
+            "sDrive 35i s"
+          ]
+        }
+      ]
+    }
+  },
+  "2015": {
+    "2-Series": {
+      "models": [
+        {
+          "228": [
+            "i",
+            "i xDrive"
+          ]
+        },
+        {
+          "M235": [
+            "i",
+            "i xDrive"
+          ]
+        }
+      ]
+    },
+    "3-Series": {
+      "models": [
+        {
+          "320": [
+            "i",
+            "i xDrive"
+          ]
+        },
+        {
+          "328": [
+            "i",
+            "i xDrive"
+          ]
+        },
+        {
+          "328 Gran Turismo": [
+            "i xDrive"
+          ]
+        },
+        {
+          "328d": [
+            "base",
+            "xDrive"
+          ]
+        },
+        {
+          "335": [
+            "i",
+            "i xDrive"
+          ]
+        },
+        {
+          "335 Gran Turismo": [
+            "i xDrive"
+          ]
+        },
+        {
+          "M3": [
+            ""
+          ]
+        }
+      ]
+    },
+    "4-Series": {
+      "models": [
+        {
+          "428": [
+            "i",
+            "i xDrive"
+          ]
+        },
+        {
+          "428 Gran Coupe": [
+            "i",
+            "i xDrive"
+          ]
+        },
+        {
+          "435": [
+            "i",
+            "i xDrive"
+          ]
+        },
+        {
+          "435 Gran Coupe": [
+            "i",
+            "i xDrive"
+          ]
+        },
+        {
+          "M4": [
+            ""
+          ]
+        }
+      ]
+    },
+    "5-Series": {
+      "models": [
+        {
+          "528": [
+            "i",
+            "i xDrive"
+          ]
+        },
+        {
+          "535": [
+            "i",
+            "i xDrive"
+          ]
+        },
+        {
+          "535 Gran Turismo": [
+            "i",
+            "i xDrive"
+          ]
+        },
+        {
+          "535d": [
+            "xDrive"
+          ]
+        },
+        {
+          "550": [
+            "i",
+            "i xDrive"
+          ]
+        },
+        {
+          "550 Gran Turismo": [
+            "i xDrive"
+          ]
+        },
+        {
+          "M5": [
+            ""
+          ]
+        }
+      ]
+    },
+    "6-Series": {
+      "models": [
+        {
+          "640": [
+            "i",
+            "i xDrive"
+          ]
+        },
+        {
+          "640 Gran Coupe": [
+            "i",
+            "i xDrive"
+          ]
+        },
+        {
+          "650": [
+            "i",
+            "i xDrive"
+          ]
+        },
+        {
+          "650 Gran Coupe": [
+            "i",
+            "i xDrive"
+          ]
+        },
+        {
+          "M6": [
+            ""
+          ]
+        },
+        {
+          "M6 Gran Coupe": [
+            ""
+          ]
+        }
+      ]
+    },
+    "7-Series": {
+      "models": [
+        {
+          "740": [
+            "Ld xDrive",
+            "Li",
+            "Li xDrive",
+            "i"
+          ]
+        },
+        {
+          "750": [
+            "Li",
+            "Li xDrive",
+            "i",
+            "i xDrive"
+          ]
+        },
+        {
+          "760": [
+            "Li"
+          ]
+        }
+      ]
+    },
+    "ALPINA": {
+      "models": [
+        {
+          "ALPINA B6 Gran Coupe": [
+            "xDrive"
+          ]
+        },
+        {
+          "ALPINA B7": [
+            "SWB",
+            "SWB xDrive",
+            "LWB",
+            "LWB xDrive"
+          ]
+        }
+      ]
+    },
+    "ActiveHybrid": {
+      "models": [
+        {
+          "ActiveHybrid3": [
+            ""
+          ]
+        },
+        {
+          "ActiveHybrid5": [
+            ""
+          ]
+        }
+      ]
+    },
+    "X-Series": {
+      "models": [
+        {
+          "X1": [
+            "sDrive 28i",
+            "xDrive 28i",
+            "xDrive 35i"
+          ]
+        },
+        {
+          "X3": [
+            "sDrive 28i",
+            "xDrive 28d",
+            "xDrive 28i",
+            "xDrive 35i"
+          ]
+        },
+        {
+          "X4": [
+            "xDrive 28i",
+            "xDrive 35i"
+          ]
+        },
+        {
+          "X5": [
+            "sDrive 35i",
+            "xDrive 35d",
+            "xDrive 35i",
+            "xDrive 50i"
+          ]
+        },
+        {
+          "X6": [
+            "xDrive 35i",
+            "xDrive 50i"
+          ]
+        },
+        {
+          "X5 M": [
+            ""
+          ]
+        },
+        {
+          "X6 M": [
+            ""
+          ]
+        }
+      ]
+    },
+    "i-Series": {
+      "models": [
+        {
+          "i3": [
+            "base",
+            "base w/Range Extender"
+          ]
+        },
+        {
+          "i8": [
+            ""
+          ]
+        }
+      ]
+    },
+    "M-series": {
+      "models": [
+        {
+          "M235": [
+            ""
+          ]
+        },
+        {
+          "M3": [
+            ""
+          ]
+        },
+        {
+          "M4": [
+            ""
+          ]
+        },
+        {
+          "M5": [
+            ""
+          ]
+        },
+        {
+          "M6": [
+            ""
+          ]
+        },
+        {
+          "M6 Gran Coupe": [
+            ""
+          ]
+        },
+        {
+          "X6 M": [
+            ""
+          ]
+        }
+      ]
+    },
+    "Z-series": {
+      "models": [
+        {
+          "Z4": [
+            "sDrive 28i",
+            "sDrive 35i",
+            "sDrive 35i s"
+          ]
+        }
+      ]
+    }
+  },
+  "2016": {
+    "2-Series": {
+      "models": [
+        {
+          "228": [
+            "i",
+            "i xDrive"
+          ]
+        },
+        {
+          "M235": [
+            "i",
+            "i xDrive"
+          ]
+        },
+        {
+          "M2": [
+            ""
+          ]
+        }
+      ]
+    },
+    "3-Series": {
+      "models": [
+        {
+          "320": [
+            "i",
+            "i xDrive"
+          ]
+        },
+        {
+          "328": [
+            "i",
+            "i SULEV",
+            "i xDrive",
+            "i xDrive SULEV"
+          ]
+        },
+        {
+          "328 Gran Turismo": [
+            "i xDrive SULEV"
+          ]
+        },
+        {
+          "328d": [
+            "base",
+            "xDrive"
+          ]
+        },
+        {
+          "330e": [
+            ""
+          ]
+        },
+        {
+          "335 Gran Turismo": [
+            "i xDrive"
+          ]
+        },
+        {
+          "340": [
+            "i",
+            "i xDrive"
+          ]
+        },
+        {
+          "M3": [
+            ""
+          ]
+        }
+      ]
+    },
+    "4-Series": {
+      "models": [
+        {
+          "428": [
+            "i",
+            "i SULEV",
+            "i xDrive",
+            "i xDrive SULEV"
+          ]
+        },
+        {
+          "428 Gran Coupe": [
+            "i",
+            "i SULEV",
+            "i xDrive",
+            "i xDrive SULEV"
+          ]
+        },
+        {
+          "435": [
+            "i",
+            "i xDrive"
+          ]
+        },
+        {
+          "435 Gran Coupe": [
+            "i",
+            "i xDrive"
+          ]
+        },
+        {
+          "M4": [
+            ""
+          ]
+        }
+      ]
+    },
+    "5-Series": {
+      "models": [
+        {
+          "528": [
+            "i",
+            "i xDrive"
+          ]
+        },
+        {
+          "535": [
+            "i",
+            "i xDrive"
+          ]
+        },
+        {
+          "535 Gran Turismo": [
+            "i",
+            "i xDrive"
+          ]
+        },
+        {
+          "535d": [
+            "base"
+          ]
+        },
+        {
+          "550": [
+            "i",
+            "i xDrive"
+          ]
+        },
+        {
+          "550 Gran Turismo": [
+            "i xDrive"
+          ]
+        },
+        {
+          "M5": [
+            ""
+          ]
+        }
+      ]
+    },
+    "6-Series": {
+      "models": [
+        {
+          "640": [
+            "i",
+            "i xDrive"
+          ]
+        },
+        {
+          "640 Gran Coupe": [
+            "i",
+            "i xDrive"
+          ]
+        },
+        {
+          "650": [
+            "i",
+            "i xDrive"
+          ]
+        },
+        {
+          "650 Gran Coupe": [
+            "i",
+            "i xDrive"
+          ]
+        },
+        {
+          "M6": [
+            ""
+          ]
+        },
+        {
+          "M6 Gran Coupe": [
+            ""
+          ]
+        }
+      ]
+    },
+    "7-Series": {
+      "models": [
+        {
+          "740": [
+            "i"
+          ]
+        },
+        {
+          "750": [
+            "i",
+            "i xDrive"
+          ]
+        }
+      ]
+    },
+    "ALPINA": {
+      "models": [
+        {
+          "ALPINA B6 Gran Coupe": [
+            ""
+          ]
+        }
+      ]
+    },
+    "X-Series": {
+      "models": [
+        {
+          "X1": [
+            "xDrive 28i"
+          ]
+        },
+        {
+          "X3": [
+            "sDrive 28i",
+            "xDrive 28d",
+            "xDrive 28i",
+            "xDrive 35i"
+          ]
+        },
+        {
+          "X4": [
+            "xDrive 28i",
+            "xDrive 35i"
+          ]
+        },
+        {
+          "X5": [
+            "sDrive 35i",
+            "xDrive 35d",
+            "xDrive 35i",
+            "xDrive 50i"
+          ]
+        },
+        {
+          "X5 eDrive": [
+            "xDrive 40e"
+          ]
+        },
+        {
+          "X6": [
+            "sDrive 35i",
+            "xDrive 35i",
+            "xDrive 50i"
+          ]
+        },
+        {
+          "X5 M": [
+            ""
+          ]
+        },
+        {
+          "X6 M": [
+            ""
+          ]
+        }
+      ]
+    },
+    "i-Series": {
+      "models": [
+        {
+          "i3": [
+            "base",
+            "base w/Range Extender"
+          ]
+        },
+        {
+          "i8": [
+            ""
+          ]
+        }
+      ]
+    },
+    "M-series": {
+      "models": [
+        {
+          "M2": [
+            ""
+          ]
+        },
+        {
+          "M235": [
+            "i",
+            "i xDrive"
+          ]
+        },
+        {
+          "M3": [
+            ""
+          ]
+        },
+        {
+          "M4": [
+            ""
+          ]
+        },
+        {
+          "M5": [
+            ""
+          ]
+        },
+        {
+          "M6": [
+            ""
+          ]
+        },
+        {
+          "M6 Gran Coupe": [
+            ""
+          ]
+        },
+        {
+          "X5 M": [
+            ""
+          ]
+        },
+        {
+          "X6 M": [
+            ""
+          ]
+        }
+      ]
+    },
+    "Z-series": {
+      "models": [
+        {
+          "Z4": [
+            "sDrive 28i",
+            "sDrive 35i",
+            "sDrive 35i s"
+          ]
+        }
+      ]
+    }
+  },
+  "2017": {
+    "2-Series": {
+      "models": [
+        {
+          "230": [
+            "i",
+            "i xDrive"
+          ]
+        },
+        {
+          "M240": [
+            "i",
+            "i xDrive"
+          ]
+        },
+        {
+          "M2": [
+            ""
+          ]
+        }
+      ]
+    },
+    "3-Series": {
+      "models": [
+        {
+          "320": [
+            "i",
+            "i xDrive"
+          ]
+        },
+        {
+          "328d": [
+            "base",
+            "xDrive"
+          ]
+        },
+        {
+          "330": [
+            "i",
+            "i xDrive"
+          ]
+        },
+        {
+          "330 Gran Turismo": [
+            "i xDrive"
+          ]
+        },
+        {
+          "330e": [
+            "iPerformance"
+          ]
+        },
+        {
+          "340": [
+            "i",
+            "i xDrive"
+          ]
+        },
+        {
+          "340 Gran Turismo": [
+            "i xDrive"
+          ]
+        },
+        {
+          "M3": [
+            ""
+          ]
+        }
+      ]
+    },
+    "4-Series": {
+      "models": [
+        {
+          "430": [
+            "i",
+            "i xDrive"
+          ]
+        },
+        {
+          "430 Gran Coupe": [
+            "i",
+            "i xDrive"
+          ]
+        },
+        {
+          "440": [
+            "i",
+            "i xDrive"
+          ]
+        },
+        {
+          "440 Gran Coupe": [
+            "i",
+            "i xDrive"
+          ]
+        },
+        {
+          "M4": [
+            ""
+          ]
+        }
+      ]
+    },
+    "5-Series": {
+      "models": [
+        {
+          "530": [
+            "i",
+            "i xDrive"
+          ]
+        },
+        {
+          "535 Gran Turismo": [
+            "i",
+            "i xDrive"
+          ]
+        },
+        {
+          "540": [
+            "i",
+            "i xDrive"
+          ]
+        }
+      ]
+    },
+    "6-Series": {
+      "models": [
+        {
+          "640": [
+            "i",
+            "i xDrive"
+          ]
+        },
+        {
+          "640 Gran Coupe": [
+            "i",
+            "i xDrive"
+          ]
+        },
+        {
+          "650": [
+            "i",
+            "i xDrive"
+          ]
+        },
+        {
+          "650 Gran Coupe": [
+            "i",
+            "i xDrive"
+          ]
+        },
+        {
+          "M6": [
+            ""
+          ]
+        },
+        {
+          "M6 Gran Coupe": [
+            ""
+          ]
+        }
+      ]
+    },
+    "7-Series": {
+      "models": [
+        {
+          "740": [
+            "i",
+            "i xDrive"
+          ]
+        },
+        {
+          "740e": [
+            "xDrive iPerformance"
+          ]
+        },
+        {
+          "750": [
+            "i",
+            "i xDrive"
+          ]
+        },
+        {
+          "M760": [
+            "i xDrive"
+          ]
+        }
+      ]
+    },
+    "ALPINA": {
+      "models": [
+        {
+          "ALPINA B6 Gran Coupe": [
+            ""
+          ]
+        },
+        {
+          "ALPINA B7": [
+            "xDrive"
+          ]
+        }
+      ]
+    },
+    "X-Series": {
+      "models": [
+        {
+          "X1": [
+            "sDrive 28i",
+            "xDrive 28i"
+          ]
+        },
+        {
+          "X3": [
+            "sDrive 28i",
+            "xDrive 28d",
+            "xDrive 28i",
+            "xDrive 35i"
+          ]
+        },
+        {
+          "X4": [
+            "xDrive 28i",
+            "M40i"
+          ]
+        },
+        {
+          "X5": [
+            "sDrive 35i",
+            "xDrive 35d",
+            "xDrive 35i",
+            "xDrive 50i",
+            "xDrive 40e iPerformance"
+          ]
+        },
+        {
+          "X5 M": [
+            ""
+          ]
+        },
+        {
+          "X5 eDrive": [
+            "xDrive 40e"
+          ]
+        },
+        {
+          "X6": [
+            "sDrive 35i",
+            "xDrive 35i",
+            "xDrive 50i"
+          ]
+        },
+        {
+          "X6 M": [
+            ""
+          ]
+        }
+      ]
+    },
+    "i-Series": {
+      "models": [
+        {
+          "i3": [
+            "base (60 Ah)",
+            "94 Ah",
+            "94 Ah w/Range Extender"
+          ]
+        },
+        {
+          "i8": [
+            ""
+          ]
+        }
+      ]
+    },
+    "M-series": {
+      "models": [
+        {
+          "M2": [
+            ""
+          ]
+        },
+        {
+          "M240": [
+            "i",
+            "i xDrive"
+          ]
+        },
+        {
+          "M3": [
+            ""
+          ]
+        },
+        {
+          "M4": [
+            ""
+          ]
+        },
+        {
+          "M6": [
+            ""
+          ]
+        },
+        {
+          "M6 Gran Coupe": [
+            ""
+          ]
+        },
+        {
+          "M760": [
+            "i xDrive"
+          ]
+        }
+      ]
+    }
+  },
+  "2018": {
+    "2-Series": {
+      "models": [
+        {
+          "230": [
+            "i",
+            "i xDrive"
+          ]
+        },
+        {
+          "M240": [
+            "i",
+            "i xDrive"
+          ]
+        },
+        {
+          "M2": [
+            ""
+          ]
+        }
+      ]
+    },
+    "3-Series": {
+      "models": [
+        {
+          "320": [
+            "i",
+            "i xDrive"
+          ]
+        },
+        {
+          "328d": [
+            "base",
+            "xDrive"
+          ]
+        },
+        {
+          "330": [
+            "i",
+            "i xDrive"
+          ]
+        },
+        {
+          "330 Gran Turismo": [
+            "i xDrive"
+          ]
+        },
+        {
+          "330e": [
+            "iPerformance"
+          ]
+        },
+        {
+          "340": [
+            "i",
+            "i xDrive"
+          ]
+        },
+        {
+          "340 Gran Turismo": [
+            "i xDrive"
+          ]
+        },
+        {
+          "M3": [
+            ""
+          ]
+        }
+      ]
+    },
+    "4-Series": {
+      "models": [
+        {
+          "430": [
+            "i",
+            "i xDrive"
+          ]
+        },
+        {
+          "430 Gran Coupe": [
+            "i",
+            "i xDrive"
+          ]
+        },
+        {
+          "440": [
+            "i",
+            "i xDrive"
+          ]
+        },
+        {
+          "440 Gran Coupe": [
+            "i",
+            "i xDrive"
+          ]
+        },
+        {
+          "M4": [
+            ""
+          ]
+        }
+      ]
+    },
+    "5-Series": {
+      "models": [
+        {
+          "530": [
+            "i",
+            "i xDrive"
+          ]
+        },
+        {
+          "530e": [
+            "iPerformance",
+            "xDrive iPerformance"
+          ]
+        },
+        {
+          "540": [
+            "i",
+            "i xDrive"
+          ]
+        },
+        {
+          "540d": [
+            "xDrive"
+          ]
+        },
+        {
+          "M550": [
+            "i xDrive"
+          ]
+        },
+        {
+          "M5": [
+            ""
+          ]
+        }
+      ]
+    },
+    "6-Series": {
+      "models": [
+        {
+          "640": [
+            "i",
+            "i xDrive"
+          ]
+        },
+        {
+          "640 Gran Coupe": [
+            "i",
+            "i xDrive"
+          ]
+        },
+        {
+          "640 Gran Turismo": [
+            "i xDrive"
+          ]
+        },
+        {
+          "650": [
+            "i",
+            "i xDrive"
+          ]
+        },
+        {
+          "650 Gran Coupe": [
+            "i xDrive"
+          ]
+        },
+        {
+          "M6 Gran Coupe": [
+            ""
+          ]
+        }
+      ]
+    },
+    "7-Series": {
+      "models": [
+        {
+          "740": [
+            "i",
+            "i xDrive"
+          ]
+        },
+        {
+          "740e": [
+            "xDrive iPerformance"
+          ]
+        },
+        {
+          "750": [
+            "i",
+            "i xDrive"
+          ]
+        },
+        {
+          "M760": [
+            "i xDrive"
+          ]
+        }
+      ]
+    },
+    "ALPINA": {
+      "models": [
+        {
+          "ALPINA B6 Gran Coupe": [
+            ""
+          ]
+        },
+        {
+          "ALPINA B7": [
+            "xDrive"
+          ]
+        }
+      ]
+    },
+    "X-Series": {
+      "models": [
+        {
+          "X1": [
+            "sDrive 28i",
+            "xDrive 28i"
+          ]
+        },
+        {
+          "X2": [
+            "sDrive 28i",
+            "xDrive 28i"
+          ]
+        },
+        {
+          "X3": [
+            "xDrive 30i",
+            "M40i"
+          ]
+        },
+        {
+          "X4": [
+            "xDrive 28i",
+            "M40i"
+          ]
+        },
+        {
+          "X5": [
+            "sDrive 35i",
+            "xDrive 35d",
+            "xDrive 35i",
+            "xDrive 50i",
+            "xDrive 40e iPerformance"
+          ]
+        },
+        {
+          "X5 M": [
+            ""
+          ]
+        },
+        {
+          "X5 eDrive": [
+            "xDrive 40e"
+          ]
+        },
+        {
+          "X6": [
+            "sDrive 35i",
+            "xDrive 35i",
+            "xDrive 50i"
+          ]
+        },
+        {
+          "X6 M": [
+            ""
+          ]
+        }
+      ]
+    },
+    "i-Series": {
+      "models": [
+        {
+          "i3": [
+            "94 Ah",
+            "94 Ah s",
+            "94 Ah w/Range Extender",
+            "94 Ah s w/Range Extender"
+          ]
+        }
+      ]
+    },
+    "M-series": {
+      "models": [
+        {
+          "M2": []
+        },
+        {
+          "M240": [
+            "i",
+            "i xDrive"
+          ]
+        },
+        {
+          "M3": []
+        },
+        {
+          "M4": []
+        },
+        {
+          "M5": []
+        },
+        {
+          "M550": [
+            "i xDrive"
+          ]
+        },
+        {
+          "M6 Gran Coupe": []
+        },
+        {
+          "M760": [
+            "i xDrive"
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,15 @@
+
+.posting-mileage {
+  color: #666;
+  font-size: 0.8rem;
+  white-space: nowrap;
+}
+
+
+.posting-detail-item{
+  font-weight: bold;
+}
+
+.price-chart {
+  border-right: 1px solid rgba(0,0,0,.1);
+}

@@ -1,0 +1,48 @@
+﻿.panel-primary > .panel-heading {
+    background-color: #0A4484;
+    border-color: #0A4484;
+}
+
+.panel-primary > .panel-footer + .panel-collapse > .panel-body {
+    border-bottom-color: #0A4484;
+}
+
+.panel-primary {
+    border-color: #0A4484;
+}
+
+body {
+    font-family: Verdana;
+}
+
+.text-primary {
+    color: #0A4484;
+}
+
+bodyNormal {
+    font-family: Verdana;
+    line-height: 1.42857143;
+}
+
+.btn-primary {
+    background-color: #14558f;
+    border-color: #2e6da4;
+    color: #fff;
+}
+
+.top-buffer {
+    margin-top: 10px;
+}
+
+#radio-group label {
+    margin: 0;
+}
+
+.Space label {
+    margin-left: 10px;
+    margin-right: 30px;
+}
+
+.btn-warning {
+    background-color: #FFCC00;
+}
